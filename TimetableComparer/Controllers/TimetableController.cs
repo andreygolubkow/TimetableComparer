@@ -37,7 +37,7 @@ namespace TimetableComparer.Controllers
             var startWeekDate = DateTools.GetStartWeekDate(weekNum);
 
             windows.StartDate = startWeekDate;
-            windows.EndDate = startWeekDate.AddDays(7);
+            windows.EndDate = startWeekDate.AddDays(6);
 
             windows.LectureTimes = LectureTime.GetTusurLectureTimes();
 

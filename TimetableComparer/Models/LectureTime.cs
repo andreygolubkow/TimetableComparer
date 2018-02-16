@@ -25,7 +25,7 @@ namespace TimetableComparer.Models
 
         public string Time
         {
-            get => Hours.ToString() + Delimitter + Minuts.ToString();
+            get => Hours.ToString() + Delimitter + (Minuts>9 ? Minuts.ToString() : "0" + Minuts);
             set
             {
                 Hours = Convert.ToInt32(value.Substring(0,value.IndexOf(Delimitter)));

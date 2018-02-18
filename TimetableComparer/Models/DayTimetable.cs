@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace TimetableComparer.Models
 {
-    public class DayLectures
+    public class DayTimetable
     {
         public DateTime Date { get; set; }
         

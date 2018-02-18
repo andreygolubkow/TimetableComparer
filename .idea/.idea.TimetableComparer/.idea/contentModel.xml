@@ -17,36 +17,527 @@
             <e p="app.po.ts" t="Include" />
           </e>
           <e p="karma.conf.js" t="Include" />
+          <e p="LICENSE" t="Include" />
+          <e p="node_modules" t="Include">
+            <e p="ui-carousel" t="Include">
+              <e p=".npmignore" t="Include" />
+              <e p="dist" t="Include">
+                <e p="index.d.ts" t="Include" />
+                <e p="index.js" t="Include" />
+                <e p="index.js.map" t="Include" />
+                <e p="index.metadata.json" t="Include" />
+                <e p="src" t="Include">
+                  <e p="arrow" t="Include">
+                    <e p="arrow.component.d.ts" t="Include" />
+                    <e p="arrow.component.js" t="Include" />
+                    <e p="arrow.component.js.map" t="Include" />
+                    <e p="arrow.component.metadata.json" t="Include" />
+                  </e>
+                  <e p="directives" t="Include">
+                    <e p="swiper.directive.d.ts" t="Include" />
+                    <e p="swiper.directive.js" t="Include" />
+                    <e p="swiper.directive.js.map" t="Include" />
+                    <e p="swiper.directive.metadata.json" t="Include" />
+                    <e p="ui-lazy-load.directive.d.ts" t="Include" />
+                    <e p="ui-lazy-load.directive.js" t="Include" />
+                    <e p="ui-lazy-load.directive.js.map" t="Include" />
+                    <e p="ui-lazy-load.directive.metadata.json" t="Include" />
+                  </e>
+                  <e p="dots" t="Include">
+                    <e p="dots.component.d.ts" t="Include" />
+                    <e p="dots.component.js" t="Include" />
+                    <e p="dots.component.js.map" t="Include" />
+                    <e p="dots.component.metadata.json" t="Include" />
+                  </e>
+                  <e p="ui-carousel" t="Include">
+                    <e p="ui-carousel.component.d.ts" t="Include" />
+                    <e p="ui-carousel.component.js" t="Include" />
+                    <e p="ui-carousel.component.js.map" t="Include" />
+                    <e p="ui-carousel.component.metadata.json" t="Include" />
+                  </e>
+                  <e p="ui-carousel-item" t="Include">
+                    <e p="ui-carousel-item.component.d.ts" t="Include" />
+                    <e p="ui-carousel-item.component.js" t="Include" />
+                    <e p="ui-carousel-item.component.js.map" t="Include" />
+                    <e p="ui-carousel-item.component.metadata.json" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="examples" t="Include">
+                <e p=".angular-cli.json" t="Include" />
+                <e p=".editorconfig" t="Include" />
+                <e p=".npmignore" t="Include" />
+                <e p="e2e" t="Include">
+                  <e p="app.e2e-spec.ts" t="Include" />
+                  <e p="app.po.ts" t="Include" />
+                  <e p="tsconfig.e2e.json" t="Include" />
+                </e>
+                <e p="karma.conf.js" t="Include" />
+                <e p="package.json" t="Include" />
+                <e p="protractor.conf.js" t="Include" />
+                <e p="README.md" t="Include" />
+                <e p="src" t="Include">
+                  <e p="app" t="Include">
+                    <e p="app.component.css" t="Include" />
+                    <e p="app.component.html" t="Include" />
+                    <e p="app.component.spec.ts" t="Include" />
+                    <e p="app.component.ts" t="Include" />
+                    <e p="app.module.ts" t="Include" />
+                    <e p="custom-arrows" t="Include">
+                      <e p="custom-arrows.component.css" t="Include" />
+                      <e p="custom-arrows.component.html" t="Include" />
+                      <e p="custom-arrows.component.ts" t="Include" />
+                    </e>
+                    <e p="custom-dots" t="Include">
+                      <e p="custom-dots.component.css" t="Include" />
+                      <e p="custom-dots.component.html" t="Include" />
+                      <e p="custom-dots.component.ts" t="Include" />
+                    </e>
+                    <e p="fade-carousel" t="Include">
+                      <e p="fade-carousel.component.css" t="Include" />
+                      <e p="fade-carousel.component.html" t="Include" />
+                      <e p="fade-carousel.component.ts" t="Include" />
+                    </e>
+                    <e p="finite-carousel" t="Include">
+                      <e p="finite-carousel.component.css" t="Include" />
+                      <e p="finite-carousel.component.html" t="Include" />
+                      <e p="finite-carousel.component.ts" t="Include" />
+                    </e>
+                    <e p="infinite-carousel" t="Include">
+                      <e p="infinite-carousel.component.css" t="Include" />
+                      <e p="infinite-carousel.component.html" t="Include" />
+                      <e p="infinite-carousel.component.ts" t="Include" />
+                    </e>
+                    <e p="lazyloading" t="Include">
+                      <e p="lazyloading.component.css" t="Include" />
+                      <e p="lazyloading.component.html" t="Include" />
+                      <e p="lazyloading.component.ts" t="Include" />
+                    </e>
+                  </e>
+                  <e p="assets" t="Include">
+                    <e p=".gitkeep" t="Include" />
+                    <e p="1.jpg" t="Include" />
+                    <e p="2.jpg" t="Include" />
+                    <e p="3.jpg" t="Include" />
+                    <e p="4.jpg" t="Include" />
+                    <e p="5.jpg" t="Include" />
+                    <e p="6.jpg" t="Include" />
+                    <e p="arrow-left.png" t="Include" />
+                    <e p="arrow-right.png" t="Include" />
+                    <e p="code.png" t="Include" />
+                    <e p="github.png" t="Include" />
+                  </e>
+                  <e p="environments" t="Include">
+                    <e p="environment.prod.ts" t="Include" />
+                    <e p="environment.ts" t="Include" />
+                  </e>
+                  <e p="favicon.ico" t="Include" />
+                  <e p="index.html" t="Include" />
+                  <e p="main.ts" t="Include" />
+                  <e p="polyfills.ts" t="Include" />
+                  <e p="styles.css" t="Include" />
+                  <e p="test.ts" t="Include" />
+                  <e p="tsconfig.app.json" t="Include" />
+                  <e p="tsconfig.spec.json" t="Include" />
+                  <e p="typings.d.ts" t="Include" />
+                </e>
+                <e p="tsconfig.json" t="Include" />
+                <e p="tslint.json" t="Include" />
+              </e>
+              <e p="index.d.ts" t="Include" />
+              <e p="index.js" t="Include" />
+              <e p="index.js.map" t="Include" />
+              <e p="index.metadata.json" t="Include" />
+              <e p="index.ngfactory.d.ts" t="Include" />
+              <e p="index.ngfactory.js" t="Include" />
+              <e p="index.ngfactory.js.map" t="Include" />
+              <e p="index.ngsummary.json" t="Include" />
+              <e p="LICENSE" t="Include" />
+              <e p="package.json" t="Include" />
+              <e p="README.md" t="Include" />
+              <e p="src" t="Include">
+                <e p="arrow" t="Include">
+                  <e p="arrow.component.d.ts" t="Include" />
+                  <e p="arrow.component.js" t="Include" />
+                  <e p="arrow.component.js.map" t="Include" />
+                  <e p="arrow.component.metadata.json" t="Include" />
+                  <e p="arrow.component.ngfactory.d.ts" t="Include" />
+                  <e p="arrow.component.ngfactory.js" t="Include" />
+                  <e p="arrow.component.ngfactory.js.map" t="Include" />
+                  <e p="arrow.component.ngsummary.json" t="Include" />
+                  <e p="arrow.component.ts" t="Include" />
+                </e>
+                <e p="directives" t="Include">
+                  <e p="swiper.directive.d.ts" t="Include" />
+                  <e p="swiper.directive.js" t="Include" />
+                  <e p="swiper.directive.js.map" t="Include" />
+                  <e p="swiper.directive.metadata.json" t="Include" />
+                  <e p="swiper.directive.ngfactory.js.map" t="Include" />
+                  <e p="swiper.directive.ngsummary.json" t="Include" />
+                  <e p="swiper.directive.ts" t="Include" />
+                  <e p="ui-lazy-load.directive.d.ts" t="Include" />
+                  <e p="ui-lazy-load.directive.js" t="Include" />
+                  <e p="ui-lazy-load.directive.js.map" t="Include" />
+                  <e p="ui-lazy-load.directive.metadata.json" t="Include" />
+                  <e p="ui-lazy-load.directive.ngfactory.js.map" t="Include" />
+                  <e p="ui-lazy-load.directive.ngsummary.json" t="Include" />
+                  <e p="ui-lazy-load.directive.ts" t="Include" />
+                </e>
+                <e p="dots" t="Include">
+                  <e p="dots.component.d.ts" t="Include" />
+                  <e p="dots.component.js" t="Include" />
+                  <e p="dots.component.js.map" t="Include" />
+                  <e p="dots.component.metadata.json" t="Include" />
+                  <e p="dots.component.ngfactory.d.ts" t="Include" />
+                  <e p="dots.component.ngfactory.js" t="Include" />
+                  <e p="dots.component.ngfactory.js.map" t="Include" />
+                  <e p="dots.component.ngsummary.json" t="Include" />
+                  <e p="dots.component.ts" t="Include" />
+                </e>
+                <e p="ui-carousel" t="Include">
+                  <e p="ui-carousel.component.d.ts" t="Include" />
+                  <e p="ui-carousel.component.js" t="Include" />
+                  <e p="ui-carousel.component.js.map" t="Include" />
+                  <e p="ui-carousel.component.metadata.json" t="Include" />
+                  <e p="ui-carousel.component.ngfactory.d.ts" t="Include" />
+                  <e p="ui-carousel.component.ngfactory.js" t="Include" />
+                  <e p="ui-carousel.component.ngfactory.js.map" t="Include" />
+                  <e p="ui-carousel.component.ngsummary.json" t="Include" />
+                  <e p="ui-carousel.component.ts" t="Include" />
+                </e>
+                <e p="ui-carousel-item" t="Include">
+                  <e p="ui-carousel-item.component.d.ts" t="Include" />
+                  <e p="ui-carousel-item.component.js" t="Include" />
+                  <e p="ui-carousel-item.component.js.map" t="Include" />
+                  <e p="ui-carousel-item.component.metadata.json" t="Include" />
+                  <e p="ui-carousel-item.component.ngfactory.d.ts" t="Include" />
+                  <e p="ui-carousel-item.component.ngfactory.js" t="Include" />
+                  <e p="ui-carousel-item.component.ngfactory.js.map" t="Include" />
+                  <e p="ui-carousel-item.component.ngsummary.json" t="Include" />
+                  <e p="ui-carousel-item.component.ts" t="Include" />
+                </e>
+              </e>
+              <e p="tsconfig-aot.json" t="Include" />
+              <e p="tsconfig.json" t="Include" />
+              <e p="tslint.json" t="Include" />
+            </e>
+          </e>
           <e p="protractor.conf.js" t="Include" />
           <e p="README.md" t="Include" />
           <e p="src" t="Include">
             <e p="app" t="Include">
-              <e p="app-group" t="Include">
-                <e p="app-group.module.ts" t="Include" />
+              <e p="access-denied" t="Include">
+                <e p="access-denied-routing.module.ts" t="Include" />
+                <e p="access-denied.component.html" t="Include" />
+                <e p="access-denied.component.scss" t="Include" />
+                <e p="access-denied.component.spec.ts" t="Include" />
+                <e p="access-denied.component.ts" t="Include" />
+                <e p="access-denied.module.spec.ts" t="Include" />
+                <e p="access-denied.module.ts" t="Include" />
               </e>
-              <e p="app-main-view" t="Include">
-                <e p="app-main-view.component.css" t="Include" />
-                <e p="app-main-view.component.html" t="Include" />
-                <e p="app-main-view.component.spec.ts" t="Include" />
-                <e p="app-main-view.component.ts" t="Include" />
-                <e p="app-main-view.module.ts" t="Include" />
-              </e>
-              <e p="app.component.css" t="Include" />
+              <e p="app-routing.module.ts" t="Include" />
               <e p="app.component.html" t="Include" />
+              <e p="app.component.scss" t="Include" />
               <e p="app.component.spec.ts" t="Include" />
               <e p="app.component.ts" t="Include" />
+              <e p="app.module.spec.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
-              <e p="Models" t="Include">
-                <e p="DayTimetable.ts" t="Include" />
-                <e p="Group.ts" t="Include" />
-                <e p="LectureTime.ts" t="Include" />
+              <e p="layout" t="Include">
+                <e p="blank-page" t="Include">
+                  <e p="blank-page-routing.module.ts" t="Include" />
+                  <e p="blank-page.component.html" t="Include" />
+                  <e p="blank-page.component.scss" t="Include" />
+                  <e p="blank-page.component.spec.ts" t="Include" />
+                  <e p="blank-page.component.ts" t="Include" />
+                  <e p="blank-page.module.spec.ts" t="Include" />
+                  <e p="blank-page.module.ts" t="Include" />
+                </e>
+                <e p="bs-component" t="Include">
+                  <e p="bs-component-routing.module.ts" t="Include" />
+                  <e p="bs-component.component.html" t="Include" />
+                  <e p="bs-component.component.scss" t="Include" />
+                  <e p="bs-component.component.spec.ts" t="Include" />
+                  <e p="bs-component.component.ts" t="Include" />
+                  <e p="bs-component.module.spec.ts" t="Include" />
+                  <e p="bs-component.module.ts" t="Include" />
+                  <e p="components" t="Include">
+                    <e p="alert" t="Include">
+                      <e p="alert.component.html" t="Include" />
+                      <e p="alert.component.scss" t="Include" />
+                      <e p="alert.component.spec.ts" t="Include" />
+                      <e p="alert.component.ts" t="Include" />
+                    </e>
+                    <e p="buttons" t="Include">
+                      <e p="buttons.component.html" t="Include" />
+                      <e p="buttons.component.scss" t="Include" />
+                      <e p="buttons.component.spec.ts" t="Include" />
+                      <e p="buttons.component.ts" t="Include" />
+                    </e>
+                    <e p="collapse" t="Include">
+                      <e p="collapse.component.html" t="Include" />
+                      <e p="collapse.component.scss" t="Include" />
+                      <e p="collapse.component.spec.ts" t="Include" />
+                      <e p="collapse.component.ts" t="Include" />
+                    </e>
+                    <e p="date-picker" t="Include">
+                      <e p="date-picker.component.html" t="Include" />
+                      <e p="date-picker.component.scss" t="Include" />
+                      <e p="date-picker.component.spec.ts" t="Include" />
+                      <e p="date-picker.component.ts" t="Include" />
+                    </e>
+                    <e p="dropdown" t="Include">
+                      <e p="dropdown.component.html" t="Include" />
+                      <e p="dropdown.component.scss" t="Include" />
+                      <e p="dropdown.component.spec.ts" t="Include" />
+                      <e p="dropdown.component.ts" t="Include" />
+                    </e>
+                    <e p="index.ts" t="Include" />
+                    <e p="modal" t="Include">
+                      <e p="modal.component.html" t="Include" />
+                      <e p="modal.component.scss" t="Include" />
+                      <e p="modal.component.spec.ts" t="Include" />
+                      <e p="modal.component.ts" t="Include" />
+                    </e>
+                    <e p="pagination" t="Include">
+                      <e p="pagination.component.html" t="Include" />
+                      <e p="pagination.component.scss" t="Include" />
+                      <e p="pagination.component.spec.ts" t="Include" />
+                      <e p="pagination.component.ts" t="Include" />
+                    </e>
+                    <e p="pop-over" t="Include">
+                      <e p="pop-over.component.html" t="Include" />
+                      <e p="pop-over.component.scss" t="Include" />
+                      <e p="pop-over.component.spec.ts" t="Include" />
+                      <e p="pop-over.component.ts" t="Include" />
+                    </e>
+                    <e p="progressbar" t="Include">
+                      <e p="progressbar.component.html" t="Include" />
+                      <e p="progressbar.component.scss" t="Include" />
+                      <e p="progressbar.component.spec.ts" t="Include" />
+                      <e p="progressbar.component.ts" t="Include" />
+                    </e>
+                    <e p="rating" t="Include">
+                      <e p="rating.component.html" t="Include" />
+                      <e p="rating.component.scss" t="Include" />
+                      <e p="rating.component.spec.ts" t="Include" />
+                      <e p="rating.component.ts" t="Include" />
+                    </e>
+                    <e p="tabs" t="Include">
+                      <e p="tabs.component.html" t="Include" />
+                      <e p="tabs.component.scss" t="Include" />
+                      <e p="tabs.component.spec.ts" t="Include" />
+                      <e p="tabs.component.ts" t="Include" />
+                    </e>
+                    <e p="timepicker" t="Include">
+                      <e p="timepicker.component.html" t="Include" />
+                      <e p="timepicker.component.scss" t="Include" />
+                      <e p="timepicker.component.spec.ts" t="Include" />
+                      <e p="timepicker.component.ts" t="Include" />
+                    </e>
+                    <e p="tooltip" t="Include">
+                      <e p="tooltip.component.html" t="Include" />
+                      <e p="tooltip.component.scss" t="Include" />
+                      <e p="tooltip.component.spec.ts" t="Include" />
+                      <e p="tooltip.component.ts" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="bs-element" t="Include">
+                  <e p="bs-element-routing.module.ts" t="Include" />
+                  <e p="bs-element.component.html" t="Include" />
+                  <e p="bs-element.component.scss" t="Include" />
+                  <e p="bs-element.component.spec.ts" t="Include" />
+                  <e p="bs-element.component.ts" t="Include" />
+                  <e p="bs-element.module.spec.ts" t="Include" />
+                  <e p="bs-element.module.ts" t="Include" />
+                </e>
+                <e p="charts" t="Include">
+                  <e p="charts-routing.module.ts" t="Include" />
+                  <e p="charts.component.html" t="Include" />
+                  <e p="charts.component.scss" t="Include" />
+                  <e p="charts.component.spec.ts" t="Include" />
+                  <e p="charts.component.ts" t="Include" />
+                  <e p="charts.module.spec.ts" t="Include" />
+                  <e p="charts.module.ts" t="Include" />
+                </e>
+                <e p="components" t="Include">
+                  <e p="header" t="Include">
+                    <e p="header.component.html" t="Include" />
+                    <e p="header.component.scss" t="Include" />
+                    <e p="header.component.spec.ts" t="Include" />
+                    <e p="header.component.ts" t="Include" />
+                  </e>
+                  <e p="sidebar" t="Include">
+                    <e p="sidebar.component.html" t="Include" />
+                    <e p="sidebar.component.scss" t="Include" />
+                    <e p="sidebar.component.spec.ts" t="Include" />
+                    <e p="sidebar.component.ts" t="Include" />
+                  </e>
+                </e>
+                <e p="dashboard" t="Include">
+                  <e p="components" t="Include">
+                    <e p="chat" t="Include">
+                      <e p="chat.component.html" t="Include" />
+                      <e p="chat.component.scss" t="Include" />
+                      <e p="chat.component.spec.ts" t="Include" />
+                      <e p="chat.component.ts" t="Include" />
+                    </e>
+                    <e p="index.ts" t="Include" />
+                    <e p="notification" t="Include">
+                      <e p="notification.component.html" t="Include" />
+                      <e p="notification.component.scss" t="Include" />
+                      <e p="notification.component.spec.ts" t="Include" />
+                      <e p="notification.component.ts" t="Include" />
+                    </e>
+                    <e p="timeline" t="Include">
+                      <e p="timeline.component.html" t="Include" />
+                      <e p="timeline.component.scss" t="Include" />
+                      <e p="timeline.component.spec.ts" t="Include" />
+                      <e p="timeline.component.ts" t="Include" />
+                    </e>
+                  </e>
+                  <e p="dashboard-routing.module.ts" t="Include" />
+                  <e p="dashboard.component.html" t="Include" />
+                  <e p="dashboard.component.scss" t="Include" />
+                  <e p="dashboard.component.spec.ts" t="Include" />
+                  <e p="dashboard.component.ts" t="Include" />
+                  <e p="dashboard.module.spec.ts" t="Include" />
+                  <e p="dashboard.module.ts" t="Include" />
+                </e>
+                <e p="form" t="Include">
+                  <e p="form-routing.module.ts" t="Include" />
+                  <e p="form.component.html" t="Include" />
+                  <e p="form.component.scss" t="Include" />
+                  <e p="form.component.spec.ts" t="Include" />
+                  <e p="form.component.ts" t="Include" />
+                  <e p="form.module.spec.ts" t="Include" />
+                  <e p="form.module.ts" t="Include" />
+                </e>
+                <e p="grid" t="Include">
+                  <e p="grid-routing.module.ts" t="Include" />
+                  <e p="grid.component.html" t="Include" />
+                  <e p="grid.component.scss" t="Include" />
+                  <e p="grid.component.spec.ts" t="Include" />
+                  <e p="grid.component.ts" t="Include" />
+                  <e p="grid.module.spec.ts" t="Include" />
+                  <e p="grid.module.ts" t="Include" />
+                </e>
+                <e p="layout-routing.module.ts" t="Include" />
+                <e p="layout.component.html" t="Include" />
+                <e p="layout.component.scss" t="Include" />
+                <e p="layout.component.spec.ts" t="Include" />
+                <e p="layout.component.ts" t="Include" />
+                <e p="layout.module.spec.ts" t="Include" />
+                <e p="layout.module.ts" t="Include" />
+                <e p="tables" t="Include">
+                  <e p="tables-routing.module.ts" t="Include" />
+                  <e p="tables.component.html" t="Include" />
+                  <e p="tables.component.scss" t="Include" />
+                  <e p="tables.component.spec.ts" t="Include" />
+                  <e p="tables.component.ts" t="Include" />
+                  <e p="tables.module.spec.ts" t="Include" />
+                  <e p="tables.module.ts" t="Include" />
+                </e>
               </e>
-              <e p="services" t="Include">
-                <e p="TimetableService.ts" t="Include" />
+              <e p="login" t="Include">
+                <e p="login-routing.module.ts" t="Include" />
+                <e p="login.component.html" t="Include" />
+                <e p="login.component.scss" t="Include" />
+                <e p="login.component.spec.ts" t="Include" />
+                <e p="login.component.ts" t="Include" />
+                <e p="login.module.spec.ts" t="Include" />
+                <e p="login.module.ts" t="Include" />
+              </e>
+              <e p="not-found" t="Include">
+                <e p="not-found-routing.module.ts" t="Include" />
+                <e p="not-found.component.html" t="Include" />
+                <e p="not-found.component.scss" t="Include" />
+                <e p="not-found.component.spec.ts" t="Include" />
+                <e p="not-found.component.ts" t="Include" />
+                <e p="not-found.module.spec.ts" t="Include" />
+                <e p="not-found.module.ts" t="Include" />
+              </e>
+              <e p="router.animations.ts" t="Include" />
+              <e p="server-error" t="Include">
+                <e p="server-error-routing.module.ts" t="Include" />
+                <e p="server-error.component.html" t="Include" />
+                <e p="server-error.component.scss" t="Include" />
+                <e p="server-error.component.spec.ts" t="Include" />
+                <e p="server-error.component.ts" t="Include" />
+                <e p="server-error.module.spec.ts" t="Include" />
+                <e p="server-error.module.ts" t="Include" />
+              </e>
+              <e p="Shared" t="Include">
+                <e p="guard" t="Include">
+                  <e p="auth.guard.spec.ts" t="Include" />
+                  <e p="auth.guard.ts" t="Include" />
+                  <e p="index.ts" t="Include" />
+                </e>
+                <e p="index.ts" t="Include" />
+                <e p="Models" t="Include">
+                  <e p="DayTimetable.ts" t="Include" />
+                  <e p="Group.ts" t="Include" />
+                  <e p="Lecture.ts" t="Include" />
+                  <e p="LectureTime.ts" t="Include" />
+                  <e p="Time.ts" t="Include" />
+                </e>
+                <e p="modules" t="Include">
+                  <e p="index.ts" t="Include" />
+                  <e p="page-header" t="Include">
+                    <e p="page-header.component.html" t="Include" />
+                    <e p="page-header.component.scss" t="Include" />
+                    <e p="page-header.component.spec.ts" t="Include" />
+                    <e p="page-header.component.ts" t="Include" />
+                    <e p="page-header.module.spec.ts" t="Include" />
+                    <e p="page-header.module.ts" t="Include" />
+                  </e>
+                  <e p="stat" t="Include">
+                    <e p="stat.component.html" t="Include" />
+                    <e p="stat.component.scss" t="Include" />
+                    <e p="stat.component.spec.ts" t="Include" />
+                    <e p="stat.component.ts" t="Include" />
+                    <e p="stat.module.spec.ts" t="Include" />
+                    <e p="stat.module.ts" t="Include" />
+                  </e>
+                </e>
+                <e p="pipes" t="Include">
+                  <e p="shared-pipes.module.ts" t="Include" />
+                </e>
+                <e p="services" t="Include">
+                  <e p="index.ts" t="Include" />
+                  <e p="TimetableService.ts" t="Include" />
+                </e>
+              </e>
+              <e p="signup" t="Include">
+                <e p="signup-routing.module.ts" t="Include" />
+                <e p="signup.component.html" t="Include" />
+                <e p="signup.component.scss" t="Include" />
+                <e p="signup.component.spec.ts" t="Include" />
+                <e p="signup.component.ts" t="Include" />
+                <e p="signup.module.spec.ts" t="Include" />
+                <e p="signup.module.ts" t="Include" />
+              </e>
+              <e p="timetable" t="Include">
+                <e p="sidebar" t="Include">
+                  <e p="sidebar.component.html" t="Include" />
+                  <e p="sidebar.component.scss" t="Include" />
+                  <e p="sidebar.component.spec.ts" t="Include" />
+                  <e p="sidebar.component.ts" t="Include" />
+                </e>
+                <e p="timetable-routing.module.ts" t="Include" />
+                <e p="timetable.component.html" t="Include" />
+                <e p="timetable.component.scss" t="Include" />
+                <e p="timetable.component.ts" t="Include" />
+                <e p="timetable.module.ts" t="Include" />
               </e>
             </e>
             <e p="assets" t="Include">
-              <e p=".gitkeep" t="Include" />
+              <e p="images" t="Include">
+                <e p="logo.png" t="Include" />
+                <e p="slider1.jpg" t="Include" />
+                <e p="slider2.jpg" t="Include" />
+                <e p="slider3.jpg" t="Include" />
+              </e>
             </e>
             <e p="environments" t="Include">
               <e p="environment.prod.ts" t="Include" />
@@ -56,7 +547,102 @@
             <e p="index.html" t="Include" />
             <e p="main.ts" t="Include" />
             <e p="polyfills.ts" t="Include" />
-            <e p="styles.css" t="Include" />
+            <e p="styles" t="Include">
+              <e p="_responsive.scss" t="Include" />
+              <e p="_rtl.scss" t="Include" />
+              <e p="_spinner.scss" t="Include" />
+              <e p="_utils.scss" t="Include" />
+              <e p="app.scss" t="Include" />
+              <e p="bootstrap" t="Include">
+                <e p="_alert.scss" t="Include" />
+                <e p="_badge.scss" t="Include" />
+                <e p="_breadcrumb.scss" t="Include" />
+                <e p="_button-group.scss" t="Include" />
+                <e p="_buttons.scss" t="Include" />
+                <e p="_card.scss" t="Include" />
+                <e p="_carousel.scss" t="Include" />
+                <e p="_close.scss" t="Include" />
+                <e p="_code.scss" t="Include" />
+                <e p="_custom-forms.scss" t="Include" />
+                <e p="_dropdown.scss" t="Include" />
+                <e p="_forms.scss" t="Include" />
+                <e p="_functions.scss" t="Include" />
+                <e p="_grid.scss" t="Include" />
+                <e p="_images.scss" t="Include" />
+                <e p="_input-group.scss" t="Include" />
+                <e p="_jumbotron.scss" t="Include" />
+                <e p="_list-group.scss" t="Include" />
+                <e p="_media.scss" t="Include" />
+                <e p="_mixins.scss" t="Include" />
+                <e p="_modal.scss" t="Include" />
+                <e p="_nav.scss" t="Include" />
+                <e p="_navbar.scss" t="Include" />
+                <e p="_pagination.scss" t="Include" />
+                <e p="_popover.scss" t="Include" />
+                <e p="_print.scss" t="Include" />
+                <e p="_progress.scss" t="Include" />
+                <e p="_reboot.scss" t="Include" />
+                <e p="_root.scss" t="Include" />
+                <e p="_tables.scss" t="Include" />
+                <e p="_tooltip.scss" t="Include" />
+                <e p="_transitions.scss" t="Include" />
+                <e p="_type.scss" t="Include" />
+                <e p="_utilities.scss" t="Include" />
+                <e p="_variables.scss" t="Include" />
+                <e p="bootstrap-grid.scss" t="Include" />
+                <e p="bootstrap-reboot.scss" t="Include" />
+                <e p="bootstrap.scss" t="Include" />
+                <e p="mixins" t="Include">
+                  <e p="_alert.scss" t="Include" />
+                  <e p="_background-variant.scss" t="Include" />
+                  <e p="_badge.scss" t="Include" />
+                  <e p="_border-radius.scss" t="Include" />
+                  <e p="_box-shadow.scss" t="Include" />
+                  <e p="_breakpoints.scss" t="Include" />
+                  <e p="_buttons.scss" t="Include" />
+                  <e p="_caret.scss" t="Include" />
+                  <e p="_clearfix.scss" t="Include" />
+                  <e p="_float.scss" t="Include" />
+                  <e p="_forms.scss" t="Include" />
+                  <e p="_gradients.scss" t="Include" />
+                  <e p="_grid-framework.scss" t="Include" />
+                  <e p="_grid.scss" t="Include" />
+                  <e p="_hover.scss" t="Include" />
+                  <e p="_image.scss" t="Include" />
+                  <e p="_list-group.scss" t="Include" />
+                  <e p="_lists.scss" t="Include" />
+                  <e p="_nav-divider.scss" t="Include" />
+                  <e p="_navbar-align.scss" t="Include" />
+                  <e p="_pagination.scss" t="Include" />
+                  <e p="_reset-text.scss" t="Include" />
+                  <e p="_resize.scss" t="Include" />
+                  <e p="_screen-reader.scss" t="Include" />
+                  <e p="_size.scss" t="Include" />
+                  <e p="_table-row.scss" t="Include" />
+                  <e p="_text-emphasis.scss" t="Include" />
+                  <e p="_text-hide.scss" t="Include" />
+                  <e p="_text-truncate.scss" t="Include" />
+                  <e p="_transition.scss" t="Include" />
+                  <e p="_visibility.scss" t="Include" />
+                </e>
+                <e p="utilities" t="Include">
+                  <e p="_align.scss" t="Include" />
+                  <e p="_background.scss" t="Include" />
+                  <e p="_borders.scss" t="Include" />
+                  <e p="_clearfix.scss" t="Include" />
+                  <e p="_display.scss" t="Include" />
+                  <e p="_embed.scss" t="Include" />
+                  <e p="_flex.scss" t="Include" />
+                  <e p="_float.scss" t="Include" />
+                  <e p="_position.scss" t="Include" />
+                  <e p="_screenreaders.scss" t="Include" />
+                  <e p="_sizing.scss" t="Include" />
+                  <e p="_spacing.scss" t="Include" />
+                  <e p="_text.scss" t="Include" />
+                  <e p="_visibility.scss" t="Include" />
+                </e>
+              </e>
+            </e>
             <e p="test.ts" t="Include" />
             <e p="typings.d.ts" t="Include" />
           </e>
@@ -66,14 +652,17 @@
         </e>
         <e p="core" t="Include">
           <e p="DateTools.cs" t="Include" />
-          <e p="TusurCalendarResolver.cs" t="Include" />
+          <e p="ITimetable.cs" t="Include" />
+          <e p="TusurTimetable.cs" t="Include" />
           <e p="WindowsFinder.cs" t="Include" />
         </e>
         <e p="FreeTimeRequestAdapter.cs" t="Include" />
         <e p="Models" t="Include">
-          <e p="DayLectures.cs" t="Include" />
+          <e p="DayTimetable.cs" t="Include" />
           <e p="Group.cs" t="Include" />
+          <e p="Lecture.cs" t="Include" />
           <e p="LectureTime.cs" t="Include" />
+          <e p="Time.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -85,6 +674,49 @@
         <e p="Program.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="TimetableComparer.csproj" t="IncludeRecursive" />
+        <e p="wwwroot" t="Include">
+          <e p="assets" t="Include">
+            <e p="i18n" t="Include">
+              <e p="de.json" t="Include" />
+              <e p="en.json" t="Include" />
+              <e p="es.json" t="Include" />
+              <e p="fa.json" t="Include" />
+              <e p="fr.json" t="Include" />
+              <e p="it.json" t="Include" />
+              <e p="ur.json" t="Include" />
+              <e p="zh-CHS.json" t="Include" />
+            </e>
+            <e p="images" t="Include">
+              <e p="logo.png" t="Include" />
+              <e p="slider1.jpg" t="Include" />
+              <e p="slider2.jpg" t="Include" />
+              <e p="slider3.jpg" t="Include" />
+            </e>
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="fontawesome-webfont.674f50d287a8c48dc19b.eot" t="Include" />
+          <e p="fontawesome-webfont.912ec66d7572ff821749.svg" t="Include" />
+          <e p="fontawesome-webfont.af7ae505a9eed503f8b8.woff2" t="Include" />
+          <e p="fontawesome-webfont.b06871f281fee6b241d6.ttf" t="Include" />
+          <e p="fontawesome-webfont.fee66e712a8a08eef580.woff" t="Include" />
+          <e p="index.html" t="Include" />
+          <e p="inline.bundle.js" t="Include" />
+          <e p="inline.bundle.js.map" t="Include" />
+          <e p="main.bundle.js" t="Include" />
+          <e p="main.bundle.js.map" t="Include" />
+          <e p="not-found.module.chunk.js" t="Include" />
+          <e p="not-found.module.chunk.js.map" t="Include" />
+          <e p="polyfills.bundle.js" t="Include" />
+          <e p="polyfills.bundle.js.map" t="Include" />
+          <e p="scripts.bundle.js" t="Include" />
+          <e p="scripts.bundle.js.map" t="Include" />
+          <e p="styles.bundle.js" t="Include" />
+          <e p="styles.bundle.js.map" t="Include" />
+          <e p="timetable.module.chunk.js" t="Include" />
+          <e p="timetable.module.chunk.js.map" t="Include" />
+          <e p="vendor.bundle.js" t="Include" />
+          <e p="vendor.bundle.js.map" t="Include" />
+        </e>
       </e>
       <e p="TimetableComparer.sln" t="IncludeFlat" />
     </e>

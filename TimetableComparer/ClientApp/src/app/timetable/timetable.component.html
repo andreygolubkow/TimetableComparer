@@ -1,21 +1,49 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">Расписание </a>
+    <button class="navbar-toggler" type="button" (click)="ShowMenu()">
+        <i class="fa fa-bars text-muted" aria-hidden="true"></i>
+    </button>
+</nav>
 <nav class="sidebar">
-    <h6>Список групп</h6>
+    <br>
+    <h4 style="color: white;"> <i class="fa fa-bars" aria-hidden="true"></i> Список групп</h4>
     <div class="list-group">
-        <ul>
-            <li>Группа 1</li>
-            <li>Группа 1</li>
-        </ul>
-        <div class="control">
-            <input type="text"/>
-            <button class="btn btn-primary"></button>
+        <button *ngIf="Groups.length>0" class="btn btn-primary btn-sm pull-right" (click)="LoadTimetable();">Загрузить расписание</button>
+        <div class="list-group">
+            <div class="input-group mb-3">
+                <input type="text" #groupNum class="form-control" placeholder="Номер группы" aria-label="Номер группы" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="AddGroup(groupNum.value);"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="list-group">
+            <ul>
+                <li class="list-group-item" *ngFor="let g of Groups">
+                    {{g.groupNum}}
+                    <button (click)="RemoveGroup(g);" class="btn btn-sm"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
+
+<div class="row justify-content-md-center">
+    <h1 class="col" align="center">Расписание</h1>
+</div>
 <section class="main-container">
-    <div class="row">
+    <div class="row justify-content-md-center">
         <div class="card col-xl-11">
-            <div class="card-header">Расписание</div>
             <div class="card-body table-responsive">
+                <div class="row justify-content-md-center">
+                    <div class="col-xs-2"><button class="btn btn-sm" (click)="WeekPrev();"><b><i class="fa fa-chevron-left" aria-hidden="true"></i></b></button></div>
+                    <div class="col-xs-2">
+                        <h4 *ngIf="!Loading">Недели</h4>
+                        <h4 *ngIf="Loading"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></h4>
+                    </div>
+                    <div class="col-xs-2"><button class="btn btn-sm" (click)="WeekNext();"><i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+
+                </div>
                 <table class="table table-bordered">
                     <thead>
                     <tr>
@@ -47,6 +75,7 @@
                                     <button type="button"
                                             class="btn btn-primary btn-lg btn-block btn-outline-dark"
                                             data-html="true"
+                                            placement="bottom"
                                             [ngbTooltip]="LectionTemplate">
                                         <span class="badge badge-dark">{{t.lectures[i].lectures.length}}</span>
                                     </button>

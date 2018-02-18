@@ -6,7 +6,7 @@ import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TimetableComponent} from './timetable.component';
 import {TimetableRoutingModule} from './timetable-routing.module';
 import {SharedPipesModule} from '../shared';
-import {SidebarComponent} from './sidebar/sidebar.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -14,7 +14,8 @@ import {SidebarComponent} from './sidebar/sidebar.component';
         TimetableRoutingModule,
         TranslateModule,
         NgbDropdownModule.forRoot(),
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        FormsModule
     ],
     declarations: [TimetableComponent]
 })

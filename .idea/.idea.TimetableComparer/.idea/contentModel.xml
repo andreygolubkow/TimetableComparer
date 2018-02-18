@@ -518,12 +518,6 @@
                 <e p="signup.module.ts" t="Include" />
               </e>
               <e p="timetable" t="Include">
-                <e p="sidebar" t="Include">
-                  <e p="sidebar.component.html" t="Include" />
-                  <e p="sidebar.component.scss" t="Include" />
-                  <e p="sidebar.component.spec.ts" t="Include" />
-                  <e p="sidebar.component.ts" t="Include" />
-                </e>
                 <e p="timetable-routing.module.ts" t="Include" />
                 <e p="timetable.component.html" t="Include" />
                 <e p="timetable.component.scss" t="Include" />
@@ -675,6 +669,18 @@
         <e p="Startup.cs" t="Include" />
         <e p="TimetableComparer.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include">
+          <e p="0.e0edffd9aae41759492d.chunk.js" t="Include" />
+          <e p="1.797ae9c927c636a82205.chunk.js" t="Include" />
+          <e p="10.1db1058383f609ba67b1.chunk.js" t="Include" />
+          <e p="2.af4765a9472aa6c1c0fc.chunk.js" t="Include" />
+          <e p="3.cdf296dae2406233c245.chunk.js" t="Include" />
+          <e p="3rdpartylicenses.txt" t="Include" />
+          <e p="4.92ceeaf39277112c60d5.chunk.js" t="Include" />
+          <e p="5.ec66af48a39379b2e8f9.chunk.js" t="Include" />
+          <e p="6.3709c84ea5a4a55818bd.chunk.js" t="Include" />
+          <e p="7.06ba8d35f2d17a497b23.chunk.js" t="Include" />
+          <e p="8.68b5fa6ffbf460da7556.chunk.js" t="Include" />
+          <e p="9.440d8d64adb863c3aede.chunk.js" t="Include" />
           <e p="assets" t="Include">
             <e p="i18n" t="Include">
               <e p="de.json" t="Include" />
@@ -700,22 +706,11 @@
           <e p="fontawesome-webfont.b06871f281fee6b241d6.ttf" t="Include" />
           <e p="fontawesome-webfont.fee66e712a8a08eef580.woff" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="inline.bundle.js" t="Include" />
-          <e p="inline.bundle.js.map" t="Include" />
-          <e p="main.bundle.js" t="Include" />
-          <e p="main.bundle.js.map" t="Include" />
-          <e p="not-found.module.chunk.js" t="Include" />
-          <e p="not-found.module.chunk.js.map" t="Include" />
-          <e p="polyfills.bundle.js" t="Include" />
-          <e p="polyfills.bundle.js.map" t="Include" />
-          <e p="scripts.bundle.js" t="Include" />
-          <e p="scripts.bundle.js.map" t="Include" />
-          <e p="styles.bundle.js" t="Include" />
-          <e p="styles.bundle.js.map" t="Include" />
-          <e p="timetable.module.chunk.js" t="Include" />
-          <e p="timetable.module.chunk.js.map" t="Include" />
-          <e p="vendor.bundle.js" t="Include" />
-          <e p="vendor.bundle.js.map" t="Include" />
+          <e p="inline.71e0c02df503483ffff9.bundle.js" t="Include" />
+          <e p="main.64648690fd050ed9fd73.bundle.js" t="Include" />
+          <e p="polyfills.9fc72fcdbec9dcb4a1a9.bundle.js" t="Include" />
+          <e p="scripts.7c1e56b1dae4b642da00.bundle.js" t="Include" />
+          <e p="styles.bb14161257f7c506b16e.bundle.css" t="Include" />
         </e>
       </e>
       <e p="TimetableComparer.sln" t="IncludeFlat" />

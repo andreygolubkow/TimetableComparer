@@ -25,6 +25,38 @@ export class TimetableService {
         const timetable = this.http.post(`/api/timetable/${weekId}`, groups);
         return <Observable<DayTimetable[] >> timetable;
     }
+
+    public ResolveFaculty(group: string): string {
+        switch (group[0]) {
+            case '0': {
+                return group[1] === '9' ? 'yuf' : 'fit';
+            }
+            case '1': {
+                return 'rtf';
+            }
+            case '2': {
+                return 'rkf';
+            }
+            case '3': {
+                return 'fet';
+            }
+            case '4': {
+                return 'fsu';
+            }
+            case '5': {
+                return 'fvs';
+            }
+            case '6': {
+                return 'gf';
+            }
+            case '7': {
+                return 'fb';
+            }
+            case '8': {
+                return 'ef';
+            }
+        }
+    }
 }
 
 

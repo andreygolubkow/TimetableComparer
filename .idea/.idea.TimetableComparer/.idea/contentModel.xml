@@ -666,13 +666,14 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="README.md" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="TimetableComparer.csproj" t="IncludeRecursive" />
         <e p="wwwroot" t="Include">
           <e p="0.e0edffd9aae41759492d.chunk.js" t="Include" />
           <e p="1.797ae9c927c636a82205.chunk.js" t="Include" />
           <e p="10.1db1058383f609ba67b1.chunk.js" t="Include" />
-          <e p="2.af4765a9472aa6c1c0fc.chunk.js" t="Include" />
+          <e p="2.549fcdeccbd5ed21e14a.chunk.js" t="Include" />
           <e p="3.cdf296dae2406233c245.chunk.js" t="Include" />
           <e p="3rdpartylicenses.txt" t="Include" />
           <e p="4.92ceeaf39277112c60d5.chunk.js" t="Include" />
@@ -706,7 +707,7 @@
           <e p="fontawesome-webfont.b06871f281fee6b241d6.ttf" t="Include" />
           <e p="fontawesome-webfont.fee66e712a8a08eef580.woff" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="inline.71e0c02df503483ffff9.bundle.js" t="Include" />
+          <e p="inline.e7879bb2953ccceb0907.bundle.js" t="Include" />
           <e p="main.64648690fd050ed9fd73.bundle.js" t="Include" />
           <e p="polyfills.9fc72fcdbec9dcb4a1a9.bundle.js" t="Include" />
           <e p="scripts.7c1e56b1dae4b642da00.bundle.js" t="Include" />

@@ -10,14 +10,14 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
     selector: 'app-timetable',
     templateUrl: './timetable.component.html',
     styleUrls: ['./timetable.component.scss'],
-    providers: [TimetableService, NgbCarouselConfig]
+    providers: [TimetableService]
 })
 export class TimetableComponent implements OnInit {
     public Timetable: DayTimetable[] = [];
 
     public Groups: Group[] = [];
 
-    pushRightClass: string = 'push-right';
+    pushRightClass = 'push-right';
 
     public Loading = false;
 
@@ -55,9 +55,16 @@ export class TimetableComponent implements OnInit {
     }
 
     AddGroup(value: string) {
+        if (value.length < 3) {
+            return;
+        }
+        if ( this.Groups.filter(gr => gr.groupNum === value).length > 0 ) {
+            return;
+        }
+
         const g = new Group();
         g.groupNum = value;
-        g.faculty = 'fvs';
+        g.faculty = this._timetable.ResolveFaculty(value);
         this.Groups.push(g);
     }
 

@@ -18,210 +18,6 @@
           </e>
           <e p="karma.conf.js" t="Include" />
           <e p="LICENSE" t="Include" />
-          <e p="node_modules" t="Include">
-            <e p="ui-carousel" t="Include">
-              <e p=".npmignore" t="Include" />
-              <e p="dist" t="Include">
-                <e p="index.d.ts" t="Include" />
-                <e p="index.js" t="Include" />
-                <e p="index.js.map" t="Include" />
-                <e p="index.metadata.json" t="Include" />
-                <e p="src" t="Include">
-                  <e p="arrow" t="Include">
-                    <e p="arrow.component.d.ts" t="Include" />
-                    <e p="arrow.component.js" t="Include" />
-                    <e p="arrow.component.js.map" t="Include" />
-                    <e p="arrow.component.metadata.json" t="Include" />
-                  </e>
-                  <e p="directives" t="Include">
-                    <e p="swiper.directive.d.ts" t="Include" />
-                    <e p="swiper.directive.js" t="Include" />
-                    <e p="swiper.directive.js.map" t="Include" />
-                    <e p="swiper.directive.metadata.json" t="Include" />
-                    <e p="ui-lazy-load.directive.d.ts" t="Include" />
-                    <e p="ui-lazy-load.directive.js" t="Include" />
-                    <e p="ui-lazy-load.directive.js.map" t="Include" />
-                    <e p="ui-lazy-load.directive.metadata.json" t="Include" />
-                  </e>
-                  <e p="dots" t="Include">
-                    <e p="dots.component.d.ts" t="Include" />
-                    <e p="dots.component.js" t="Include" />
-                    <e p="dots.component.js.map" t="Include" />
-                    <e p="dots.component.metadata.json" t="Include" />
-                  </e>
-                  <e p="ui-carousel" t="Include">
-                    <e p="ui-carousel.component.d.ts" t="Include" />
-                    <e p="ui-carousel.component.js" t="Include" />
-                    <e p="ui-carousel.component.js.map" t="Include" />
-                    <e p="ui-carousel.component.metadata.json" t="Include" />
-                  </e>
-                  <e p="ui-carousel-item" t="Include">
-                    <e p="ui-carousel-item.component.d.ts" t="Include" />
-                    <e p="ui-carousel-item.component.js" t="Include" />
-                    <e p="ui-carousel-item.component.js.map" t="Include" />
-                    <e p="ui-carousel-item.component.metadata.json" t="Include" />
-                  </e>
-                </e>
-              </e>
-              <e p="examples" t="Include">
-                <e p=".angular-cli.json" t="Include" />
-                <e p=".editorconfig" t="Include" />
-                <e p=".npmignore" t="Include" />
-                <e p="e2e" t="Include">
-                  <e p="app.e2e-spec.ts" t="Include" />
-                  <e p="app.po.ts" t="Include" />
-                  <e p="tsconfig.e2e.json" t="Include" />
-                </e>
-                <e p="karma.conf.js" t="Include" />
-                <e p="package.json" t="Include" />
-                <e p="protractor.conf.js" t="Include" />
-                <e p="README.md" t="Include" />
-                <e p="src" t="Include">
-                  <e p="app" t="Include">
-                    <e p="app.component.css" t="Include" />
-                    <e p="app.component.html" t="Include" />
-                    <e p="app.component.spec.ts" t="Include" />
-                    <e p="app.component.ts" t="Include" />
-                    <e p="app.module.ts" t="Include" />
-                    <e p="custom-arrows" t="Include">
-                      <e p="custom-arrows.component.css" t="Include" />
-                      <e p="custom-arrows.component.html" t="Include" />
-                      <e p="custom-arrows.component.ts" t="Include" />
-                    </e>
-                    <e p="custom-dots" t="Include">
-                      <e p="custom-dots.component.css" t="Include" />
-                      <e p="custom-dots.component.html" t="Include" />
-                      <e p="custom-dots.component.ts" t="Include" />
-                    </e>
-                    <e p="fade-carousel" t="Include">
-                      <e p="fade-carousel.component.css" t="Include" />
-                      <e p="fade-carousel.component.html" t="Include" />
-                      <e p="fade-carousel.component.ts" t="Include" />
-                    </e>
-                    <e p="finite-carousel" t="Include">
-                      <e p="finite-carousel.component.css" t="Include" />
-                      <e p="finite-carousel.component.html" t="Include" />
-                      <e p="finite-carousel.component.ts" t="Include" />
-                    </e>
-                    <e p="infinite-carousel" t="Include">
-                      <e p="infinite-carousel.component.css" t="Include" />
-                      <e p="infinite-carousel.component.html" t="Include" />
-                      <e p="infinite-carousel.component.ts" t="Include" />
-                    </e>
-                    <e p="lazyloading" t="Include">
-                      <e p="lazyloading.component.css" t="Include" />
-                      <e p="lazyloading.component.html" t="Include" />
-                      <e p="lazyloading.component.ts" t="Include" />
-                    </e>
-                  </e>
-                  <e p="assets" t="Include">
-                    <e p=".gitkeep" t="Include" />
-                    <e p="1.jpg" t="Include" />
-                    <e p="2.jpg" t="Include" />
-                    <e p="3.jpg" t="Include" />
-                    <e p="4.jpg" t="Include" />
-                    <e p="5.jpg" t="Include" />
-                    <e p="6.jpg" t="Include" />
-                    <e p="arrow-left.png" t="Include" />
-                    <e p="arrow-right.png" t="Include" />
-                    <e p="code.png" t="Include" />
-                    <e p="github.png" t="Include" />
-                  </e>
-                  <e p="environments" t="Include">
-                    <e p="environment.prod.ts" t="Include" />
-                    <e p="environment.ts" t="Include" />
-                  </e>
-                  <e p="favicon.ico" t="Include" />
-                  <e p="index.html" t="Include" />
-                  <e p="main.ts" t="Include" />
-                  <e p="polyfills.ts" t="Include" />
-                  <e p="styles.css" t="Include" />
-                  <e p="test.ts" t="Include" />
-                  <e p="tsconfig.app.json" t="Include" />
-                  <e p="tsconfig.spec.json" t="Include" />
-                  <e p="typings.d.ts" t="Include" />
-                </e>
-                <e p="tsconfig.json" t="Include" />
-                <e p="tslint.json" t="Include" />
-              </e>
-              <e p="index.d.ts" t="Include" />
-              <e p="index.js" t="Include" />
-              <e p="index.js.map" t="Include" />
-              <e p="index.metadata.json" t="Include" />
-              <e p="index.ngfactory.d.ts" t="Include" />
-              <e p="index.ngfactory.js" t="Include" />
-              <e p="index.ngfactory.js.map" t="Include" />
-              <e p="index.ngsummary.json" t="Include" />
-              <e p="LICENSE" t="Include" />
-              <e p="package.json" t="Include" />
-              <e p="README.md" t="Include" />
-              <e p="src" t="Include">
-                <e p="arrow" t="Include">
-                  <e p="arrow.component.d.ts" t="Include" />
-                  <e p="arrow.component.js" t="Include" />
-                  <e p="arrow.component.js.map" t="Include" />
-                  <e p="arrow.component.metadata.json" t="Include" />
-                  <e p="arrow.component.ngfactory.d.ts" t="Include" />
-                  <e p="arrow.component.ngfactory.js" t="Include" />
-                  <e p="arrow.component.ngfactory.js.map" t="Include" />
-                  <e p="arrow.component.ngsummary.json" t="Include" />
-                  <e p="arrow.component.ts" t="Include" />
-                </e>
-                <e p="directives" t="Include">
-                  <e p="swiper.directive.d.ts" t="Include" />
-                  <e p="swiper.directive.js" t="Include" />
-                  <e p="swiper.directive.js.map" t="Include" />
-                  <e p="swiper.directive.metadata.json" t="Include" />
-                  <e p="swiper.directive.ngfactory.js.map" t="Include" />
-                  <e p="swiper.directive.ngsummary.json" t="Include" />
-                  <e p="swiper.directive.ts" t="Include" />
-                  <e p="ui-lazy-load.directive.d.ts" t="Include" />
-                  <e p="ui-lazy-load.directive.js" t="Include" />
-                  <e p="ui-lazy-load.directive.js.map" t="Include" />
-                  <e p="ui-lazy-load.directive.metadata.json" t="Include" />
-                  <e p="ui-lazy-load.directive.ngfactory.js.map" t="Include" />
-                  <e p="ui-lazy-load.directive.ngsummary.json" t="Include" />
-                  <e p="ui-lazy-load.directive.ts" t="Include" />
-                </e>
-                <e p="dots" t="Include">
-                  <e p="dots.component.d.ts" t="Include" />
-                  <e p="dots.component.js" t="Include" />
-                  <e p="dots.component.js.map" t="Include" />
-                  <e p="dots.component.metadata.json" t="Include" />
-                  <e p="dots.component.ngfactory.d.ts" t="Include" />
-                  <e p="dots.component.ngfactory.js" t="Include" />
-                  <e p="dots.component.ngfactory.js.map" t="Include" />
-                  <e p="dots.component.ngsummary.json" t="Include" />
-                  <e p="dots.component.ts" t="Include" />
-                </e>
-                <e p="ui-carousel" t="Include">
-                  <e p="ui-carousel.component.d.ts" t="Include" />
-                  <e p="ui-carousel.component.js" t="Include" />
-                  <e p="ui-carousel.component.js.map" t="Include" />
-                  <e p="ui-carousel.component.metadata.json" t="Include" />
-                  <e p="ui-carousel.component.ngfactory.d.ts" t="Include" />
-                  <e p="ui-carousel.component.ngfactory.js" t="Include" />
-                  <e p="ui-carousel.component.ngfactory.js.map" t="Include" />
-                  <e p="ui-carousel.component.ngsummary.json" t="Include" />
-                  <e p="ui-carousel.component.ts" t="Include" />
-                </e>
-                <e p="ui-carousel-item" t="Include">
-                  <e p="ui-carousel-item.component.d.ts" t="Include" />
-                  <e p="ui-carousel-item.component.js" t="Include" />
-                  <e p="ui-carousel-item.component.js.map" t="Include" />
-                  <e p="ui-carousel-item.component.metadata.json" t="Include" />
-                  <e p="ui-carousel-item.component.ngfactory.d.ts" t="Include" />
-                  <e p="ui-carousel-item.component.ngfactory.js" t="Include" />
-                  <e p="ui-carousel-item.component.ngfactory.js.map" t="Include" />
-                  <e p="ui-carousel-item.component.ngsummary.json" t="Include" />
-                  <e p="ui-carousel-item.component.ts" t="Include" />
-                </e>
-              </e>
-              <e p="tsconfig-aot.json" t="Include" />
-              <e p="tsconfig.json" t="Include" />
-              <e p="tslint.json" t="Include" />
-            </e>
-          </e>
           <e p="protractor.conf.js" t="Include" />
           <e p="README.md" t="Include" />
           <e p="src" t="Include">
@@ -673,7 +469,7 @@
           <e p="0.e0edffd9aae41759492d.chunk.js" t="Include" />
           <e p="1.797ae9c927c636a82205.chunk.js" t="Include" />
           <e p="10.1db1058383f609ba67b1.chunk.js" t="Include" />
-          <e p="2.549fcdeccbd5ed21e14a.chunk.js" t="Include" />
+          <e p="2.c64201992d0d1211dd09.chunk.js" t="Include" />
           <e p="3.cdf296dae2406233c245.chunk.js" t="Include" />
           <e p="3rdpartylicenses.txt" t="Include" />
           <e p="4.92ceeaf39277112c60d5.chunk.js" t="Include" />
@@ -707,7 +503,7 @@
           <e p="fontawesome-webfont.b06871f281fee6b241d6.ttf" t="Include" />
           <e p="fontawesome-webfont.fee66e712a8a08eef580.woff" t="Include" />
           <e p="index.html" t="Include" />
-          <e p="inline.e7879bb2953ccceb0907.bundle.js" t="Include" />
+          <e p="inline.29a9da1f5923ecb16030.bundle.js" t="Include" />
           <e p="main.64648690fd050ed9fd73.bundle.js" t="Include" />
           <e p="polyfills.9fc72fcdbec9dcb4a1a9.bundle.js" t="Include" />
           <e p="scripts.7c1e56b1dae4b642da00.bundle.js" t="Include" />

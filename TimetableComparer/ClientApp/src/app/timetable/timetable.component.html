@@ -1,14 +1,16 @@
 <nav class="navbar navbar-expand-lg fixed-top">
-    <a class="navbar-brand" href="#">Расписание </a>
+    <div class="navbar-brand">Расписание</div>
     <button class="navbar-toggler" type="button" (click)="ShowMenu()">
         <i class="fa fa-bars text-muted" aria-hidden="true"></i>
     </button>
+
 </nav>
 <nav class="sidebar">
     <br>
     <h4 style="color: white;"> <i class="fa fa-bars" aria-hidden="true"></i> Список групп</h4>
     <div class="list-group">
         <button *ngIf="Groups.length>0" class="btn btn-primary btn-sm pull-right" (click)="LoadTimetable();">Загрузить расписание</button>
+        <hr>
         <div class="list-group">
             <div class="input-group mb-3">
                 <input type="text" #groupNum class="form-control" placeholder="Номер группы" aria-label="Номер группы" aria-describedby="basic-addon2">
@@ -25,6 +27,14 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <div style="position: fixed; right: 0px; bottom: 0px; padding: 5px;">
+                <a style="padding-right: 5px;" href="https://github.com/andreygolubkow/TimetableComparer/tree/master/TimetableComparer">
+                    <i style="color: grey;" class="fa fa-github fa-2x"></i>
+                </a>
+                <a style="padding-right: 5px;" href="mailto:andreygolubkow@gmail.com">
+                    <i style="color: grey;" class="fa fa-envelope fa-2x"></i>
+                </a>
     </div>
 </nav>
 

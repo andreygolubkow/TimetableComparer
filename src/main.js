@@ -10,5 +10,6 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   template: '<App/>',
+  // eslint-disable-next-line object-curly-spacing
   components: {App},
 });

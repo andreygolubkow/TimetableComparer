@@ -5,7 +5,7 @@ import App from './App';
 
 Vue.config.productionTip = false;
 
-/* eslint-disable no-new */
+// eslint-disable-next-line no-new
 new Vue({
   el: '#app',
   template: '<App/>',

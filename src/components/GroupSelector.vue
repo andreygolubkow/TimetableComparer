@@ -23,12 +23,13 @@
 </template>
 
 <script>
+
   export default {
     name: 'app-groupselector',
     data() {
       return {
         selectedGroups: [],
-        groups: ['515-2', '515-1', '514'],
+        groups: [],
       };
     },
     methods: {
@@ -38,6 +39,14 @@
           groups.indexOf(item) !== -1,
         );
       },
+    },
+    mounted() {
+      this.$nextTick(() => {
+        this.$root.getTimetable((timetable) => {
+          const fgList = timetable.faculties.map(f => f.groups.map(g => g.name));
+          this.groups = [].concat(...fgList);
+        });
+      });
     },
   };
 </script>

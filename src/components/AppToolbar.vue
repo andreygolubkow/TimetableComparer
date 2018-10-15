@@ -13,13 +13,11 @@
 </template>
 
 <script>
-  import API from '../services/http';
-
   export default {
     name: 'app-toolbar',
     methods: {
       refreshClick() {
-        API.getFaculties(r => console.warn(r), e => console.warn(e));
+        this.$root.getTimetable(r => console.warn(r), e => console.warn(e));
       },
     },
   };

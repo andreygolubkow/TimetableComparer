@@ -9,6 +9,7 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';
 import App from './App';
+import Api from './services/http';
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
@@ -25,4 +26,5 @@ new Vue({
     secondary: colors.red.lighten4, // #FFCDD2
     accent: colors.indigo.base, // #3F51B5
   },
+  data: Api,
 });

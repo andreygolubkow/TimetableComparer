@@ -17,7 +17,7 @@
     name: 'app-toolbar',
     methods: {
       refreshClick() {
-        this.$root.getTimetable(r => console.warn(r), e => console.warn(e));
+        // this.$root.forceUpdate();
       },
     },
   };

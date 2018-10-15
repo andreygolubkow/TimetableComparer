@@ -1,11 +1,12 @@
 <template>
   <v-combobox
-    v-model="selectedGroups"
+    v-model="selectedGroups.selectedGroups"
     :items="groups"
     @change="groupListEdited()"
     hide-selected
     label="Группы"
     placeholder="Начните вводить номер группы"
+    item-text="name"
     dense
     multiple
     small-chips
@@ -28,26 +29,26 @@
     name: 'app-groupselector',
     data() {
       return {
-        selectedGroups: [],
         groups: [],
       };
     },
     methods: {
       groupListEdited() {
         const groups = this.groups;
-        this.selectedGroups = this.selectedGroups.filter(item =>
-          groups.indexOf(item) !== -1,
+        this.selectedGroups.selectedGroups = this.selectedGroups.selectedGroups.filter(item =>
+          groups.map(f => f.name).indexOf(item.name) !== -1,
         );
       },
     },
     mounted() {
       this.$nextTick(() => {
         this.$root.getTimetable((timetable) => {
-          const fgList = timetable.faculties.map(f => f.groups.map(g => g.name));
+          const fgList = timetable.faculties.map(f => f.groups);
           this.groups = [].concat(...fgList);
         });
       });
     },
+    props: ['selectedGroups'],
   };
 </script>
 

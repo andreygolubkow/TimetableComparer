@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import Hello from './components/Hello';
+  import Hello from './components/MainView';
   import AppToolbar from './components/AppToolbar';
 
   export default {

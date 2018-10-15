@@ -22,4 +22,19 @@ export default {
       responseCallback(timetable);
     }
   },
+  forceUpdate(responseCallback, errorCallback) {
+    axios.get('/static/rasp.json')
+      .then((response) => {
+        // handle success
+        timetable = response.data;
+        responseCallback(timetable);
+      })
+      .catch((error) => {
+        // handle error
+        errorCallback(error);
+      })
+      .then(() => {
+        // always executed
+      });
+  },
 };

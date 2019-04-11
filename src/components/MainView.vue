@@ -10,14 +10,14 @@
   import AppTimetable from './Timetable';
 
   export default {
-    components: {AppGroupselector, AppTimetable},
-    data() {
-      return {
-        selectedGroupsModel: {
-          selectedGroups: [],
-        },
-      };
-    },
+  	components: {AppGroupselector, AppTimetable},
+  	data () {
+  		return {
+  			selectedGroupsModel: {
+  				selectedGroups: []
+  			}
+  		};
+  	}
   };
 </script>
 

@@ -14,12 +14,12 @@
 
 <script>
   export default {
-    name: 'app-toolbar',
-    methods: {
-      refreshClick() {
-        // this.$root.forceUpdate();
-      },
-    },
+  	name: 'app-toolbar',
+  	methods: {
+  		refreshClick () {
+  			// this.$root.forceUpdate();
+  		}
+  	}
   };
 </script>
 

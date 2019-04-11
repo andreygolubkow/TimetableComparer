@@ -15,11 +15,11 @@
   import AppToolbar from './components/AppToolbar';
 
   export default {
-    name: 'app',
-    components: {
-      AppToolbar,
-      Hello,
-    },
+  	name: 'app',
+  	components: {
+  		AppToolbar,
+  		Hello
+  	}
   };
 </script>
 

@@ -35,10 +35,9 @@
             </v-card-title>
             <v-card-text>
               <v-list>
-                <v-divider></v-divider>
-                <v-list-tile>
+                <v-list-tile v-for="(time) in day.rasp">
                   <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
+                    <span slot="badge">{{time}}</span>
                     <v-icon
                       color="grey"
                     >
@@ -46,79 +45,6 @@
                     </v-icon>
                   </v-badge>
                 </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
-                <v-divider></v-divider>
-                <v-list-tile>
-                  <v-badge color="red" overlap>
-                    <span slot="badge">!</span>
-                    <v-icon
-                      color="grey"
-                    >
-                      mail
-                    </v-icon>
-                  </v-badge>
-                </v-list-tile>
-                <v-divider></v-divider>
               </v-list>
             </v-card-text>
           </v-card>
@@ -129,33 +55,127 @@
 </template>
 
 <script>
+  import moment from 'moment';
+
   export default {
-    name: 'app-timetable',
-    props: ['selectedGroups'],
-    data() {
-      return {
-        days: [
-          {
-            name: 'Пн',
-          },
-          {
-            name: 'Вт',
-          },
-          {
-            name: 'Ср',
-          },
-          {
-            name: 'Чт',
-          },
-          {
-            name: 'Пт',
-          },
-          {
-            name: 'Сб',
-          },
-        ],
-      };
-    },
+  	name: 'app-timetable',
+  	props: ['selectedGroups'],
+  	mounted () {
+  		this.$nextTick(() => {
+  			// Поправка +1, т.к. дни недели нумеруются с Вс.
+  			const m = moment().subtract(moment().day(), 'd');
+  			this.$root.getTimetable((timetable) => {
+  				const fgList = timetable.faculties.map(f => f.groups);
+  				const groups = [].concat(...fgList);
+  				// console.log(groups);
+  				const groupNum = '515-2';
+  				const groupTimetable = groups.filter(g => g.name === groupNum);
+  				// console.log(groupTimetable);
+  				const groupLessons = [].concat(...groupTimetable.map(g => g.lessons));
+  				// console.log(groupLessons);
+
+  				for (var i = 0; i < this.days.length; i++) {
+  					// console.log('date');
+  					const dateString = moment(m).add(this.days[i].num, 'd').format('DD.MM.YYYY');
+  					// console.log(dateString);
+  					const dayTimetable = groupLessons.filter(l => l.date.indexOf(dateString) > -1);
+  					// console.log(dayTimetable);
+  					for (var j = 0; j < dayTimetable.length; j++) {
+  						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
+  						this.days[i].rasp[dayTimetable[j].time.start].push(dayTimetable[j].subject);
+  					}
+  				}
+  				console.log(this.days);
+  			},
+  			(err) => {
+  				console.log(err);
+  			});
+  		});
+  	},
+  	data () {
+  		return {
+  			days: [
+  				{
+  					name: 'Пн',
+  					num: 1,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				},
+  				{
+  					name: 'Вт',
+  					num: 2,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				},
+  				{
+  					name: 'Ср',
+  					num: 3,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				},
+  				{
+  					name: 'Чт',
+  					num: 4,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				},
+  				{
+  					name: 'Пт',
+  					num: 5,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				},
+  				{
+  					name: 'Сб',
+  					num: 6,
+  					rasp: {
+  						'08:50': [],
+  						'10:40': [],
+  						'13:15': [],
+  						'15:00': [],
+  						'16:45': [],
+  						'18:30': [],
+  						'20:15': []
+  					}
+  				}
+  			]
+  		};
+  	}
   };
 </script>
 

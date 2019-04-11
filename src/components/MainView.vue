@@ -1,7 +1,6 @@
 <template>
   <div>
-    <app-groupselector :selectedGroups='selectedGroupsModel'></app-groupselector>
-    <app-timetable :selectedGroups='selectedGroupsModel.selectedGroups'></app-timetable>
+    <app-timetable :selectedGroups='selectedGroups'></app-timetable>
   </div>
 </template>
 
@@ -11,13 +10,7 @@
 
   export default {
   	components: {AppGroupselector, AppTimetable},
-  	data () {
-  		return {
-  			selectedGroupsModel: {
-  				selectedGroups: []
-  			}
-  		};
-  	}
+	props: ['selectedGroups']
   };
 </script>
 

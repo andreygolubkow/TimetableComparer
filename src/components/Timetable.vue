@@ -2,10 +2,10 @@
   <div>
     <v-container>
       <v-layout row wrap align-center justify-center>
-        <v-flex xs12 sm6 md1>
+        <v-flex xs12 sm7 md2>
           <v-card tile flat>
             <v-card-title primary-title>
-              <h3>&nbsp;</h3>
+              <h3>Расписание&nbsp;</h3>
             </v-card-title>
             <v-card-text>
               <v-list>
@@ -35,20 +35,20 @@
             </v-card-title>
             <v-card-text>
               <v-list>
-                <v-list-tile v-for="(lesson) in day.rasp">
+                <v-list-tile v-for="(lesson, key,i) in day.rasp" @click.stop="showDialog(day,key)">
                   <v-badge v-if="lesson.length>0" color="red" overlap>
                     <span slot="badge">{{lesson.length}}</span>
                     <v-icon
                       color="black"
                       large>
-                      border_all
+                      {{'filter_'+(i+1)}}
                     </v-icon>
                   </v-badge>
                   <v-badge v-else color="red" overlap>
                     <v-icon
                       large
                       color="grey">
-                      border_all
+                      {{'filter_'+(i+1)}}
                     </v-icon>
                   </v-badge>
                 </v-list-tile>
@@ -58,6 +58,30 @@
         </v-flex>
       </v-layout>
     </v-container>
+    <v-dialog
+			v-if="currentDay != null && currentKey != null && currentDay.rasp[currentKey]!=null"
+      v-model="dialog"
+      max-width="500"
+			scrollable
+    >
+      <v-card>
+        <v-card-title class="headline">{{currentDay.name}}&nbsp;{{currentKey}}</v-card-title>
+        <v-card-text>
+					<v-treeview :items="currentLessonsTree"></v-treeview>
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="blue darken-1"
+            flat="flat"
+            @click="dialog = false"
+          >
+            Закрыть
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -71,6 +95,9 @@
   	},
   	data () {
   		return {
+  			dialog: false,
+			currentDay: null,
+  			currentKey: null,
   			days: [
   				{
   					name: 'Пн',
@@ -174,17 +201,46 @@
   					// console.log(dayTimetable);
   					for (var j = 0; j < dayTimetable.length; j++) {
   						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
-  						this.days[i].rasp[dayTimetable[j].time.start].push(dayTimetable[j].subject);
+  						this.days[i].rasp[dayTimetable[j].time.start].push(Object.assign({group: groupTimetable.name}, dayTimetable[j]));
   					}
   				}
   			}
+  		},
+  		showDialog (day, key) {
+  			if (day == null || day.rasp[key] == null || day.rasp[key].length === 0) {
+  				return;
+  			}
+  			this.currentDay = day;
+  			this.currentKey = key;
+  			this.dialog = true;
   		}
   	},
   	watch: {
   		selectedGroups: function (value) {
+  			// console.log(value);
   			this.buildTimetable(value);
   		}
-  	}
+  	},
+	computed: {
+		currentLessonsTree: function () {
+			if (this.currentDay == null || this.currentKey == null) {
+				return [];
+			}
+			const lessons = this.currentDay.rasp[this.currentKey];
+			const m = lessons.map(l => {
+				return {
+					name: l.group,
+					children: [
+						{name: l.subject},
+						{name: l.type},
+						{name: l.audiences.map(a => a.name).join()},
+						{name: l.teachers.map(t => t.name).join()}
+					]};
+			});
+			console.log(m);
+			return m;
+		}
+	}
   };
 </script>
 

@@ -1,5 +1,5 @@
-<template>
-  <v-toolbar dark color="primary" flat>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+  <v-toolbar dark color="primary" >
 
     <v-toolbar-title class="white--text">Расписание+</v-toolbar-title>
 
@@ -8,7 +8,9 @@
     <v-btn icon v-on:click="refreshClick();">
       <v-icon>refresh</v-icon>
     </v-btn>
-
+		<template v-slot:extension>
+			<slot></slot>
+		</template>
   </v-toolbar>
 </template>
 

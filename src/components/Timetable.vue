@@ -40,16 +40,14 @@
                     <span slot="badge">{{lesson.length}}</span>
                     <v-icon
                       color="black"
-                      large
-                    >
+                      large>
                       border_all
                     </v-icon>
                   </v-badge>
                   <v-badge v-else color="red" overlap>
                     <v-icon
                       large
-                      color="grey"
-                    >
+                      color="grey">
                       border_all
                     </v-icon>
                   </v-badge>
@@ -70,36 +68,6 @@
   	name: 'app-timetable',
   	props: ['selectedGroups'],
   	mounted () {
-  		this.$nextTick(() => {
-  			// Поправка +1, т.к. дни недели нумеруются с Вс.
-  			const m = moment().subtract(moment().day(), 'd');
-  			this.$root.getTimetable((timetable) => {
-  				const fgList = timetable.faculties.map(f => f.groups);
-  				const groups = [].concat(...fgList);
-  				// console.log(groups);
-  				const groupNum = '515-2';
-  				const groupTimetable = groups.filter(g => g.name === groupNum);
-  				// console.log(groupTimetable);
-  				const groupLessons = [].concat(...groupTimetable.map(g => g.lessons));
-  				// console.log(groupLessons);
-
-  				for (var i = 0; i < this.days.length; i++) {
-  					// console.log('date');
-  					const dateString = moment(m).add(this.days[i].num, 'd').format('DD.MM.YYYY');
-  					// console.log(dateString);
-  					const dayTimetable = groupLessons.filter(l => l.date.indexOf(dateString) > -1);
-  					// console.log(dayTimetable);
-  					for (var j = 0; j < dayTimetable.length; j++) {
-  						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
-  						this.days[i].rasp[dayTimetable[j].time.start].push(dayTimetable[j].subject);
-  					}
-  				}
-  				console.log(this.days);
-  			},
-  			(err) => {
-  				console.log(err);
-  			});
-  		});
   	},
   	data () {
   		return {
@@ -184,6 +152,38 @@
   				}
   			]
   		};
+  	},
+  	methods: {
+  		buildTimetable: function (selectedGroups) {
+  			for (let i = 0; i < this.days.length; i++) {
+  				for (let key in this.days[i].rasp) {
+  					this.days[i].rasp[key] = [];
+  				}
+  			}
+  			const m = moment().subtract(moment().day(), 'd');
+  			for (let grNum = 0; grNum < selectedGroups.length; grNum++) {
+  				const groupTimetable = selectedGroups[grNum];
+  				const groupLessons = [].concat(...groupTimetable.lessons);
+  				// console.log(groupLessons);
+
+  				for (var i = 0; i < this.days.length; i++) {
+  					// console.log('date');
+  					const dateString = moment(m).add(this.days[i].num, 'd').format('DD.MM.YYYY');
+  					// console.log(dateString);
+  					const dayTimetable = groupLessons.filter(l => l.date.indexOf(dateString) > -1);
+  					// console.log(dayTimetable);
+  					for (var j = 0; j < dayTimetable.length; j++) {
+  						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
+  						this.days[i].rasp[dayTimetable[j].time.start].push(dayTimetable[j].subject);
+  					}
+  				}
+  			}
+  		}
+  	},
+  	watch: {
+  		selectedGroups: function (value) {
+  			this.buildTimetable(value);
+  		}
   	}
   };
 </script>

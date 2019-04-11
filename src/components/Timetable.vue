@@ -35,13 +35,22 @@
             </v-card-title>
             <v-card-text>
               <v-list>
-                <v-list-tile v-for="(time) in day.rasp">
-                  <v-badge color="red" overlap>
-                    <span slot="badge">{{time}}</span>
+                <v-list-tile v-for="(lesson) in day.rasp">
+                  <v-badge v-if="lesson.length>0" color="red" overlap>
+                    <span slot="badge">{{lesson.length}}</span>
                     <v-icon
+                      color="black"
+                      large
+                    >
+                      border_all
+                    </v-icon>
+                  </v-badge>
+                  <v-badge v-else color="red" overlap>
+                    <v-icon
+                      large
                       color="grey"
                     >
-                      mail
+                      border_all
                     </v-icon>
                   </v-badge>
                 </v-list-tile>

@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <app-timetable :selectedGroups='selectedGroups'></app-timetable>
   </div>
 </template>

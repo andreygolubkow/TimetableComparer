@@ -5,23 +5,39 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon v-on:click="refreshClick();">
-      <v-icon>refresh</v-icon>
+    <v-btn icon v-on:click="dialog.visible=true">
+      <v-icon>help_outline</v-icon>
+    </v-btn>
+		<v-btn icon v-on:click="openGit	">
+      <v-icon>code</v-icon>
     </v-btn>
 		<template v-slot:extension>
 			<slot></slot>
 		</template>
+		<help-dialog :dialog="dialog"></help-dialog>
   </v-toolbar>
 </template>
 
 <script>
-  export default {
+  import HelpDialog from './HelpDialog';
+export default {
   	name: 'app-toolbar',
-  	methods: {
+	components: {HelpDialog},
+	methods: {
   		refreshClick () {
   			// this.$root.forceUpdate();
-  		}
-  	}
+  		},
+		openGit () {
+			window.open('https://github.com/andreygolubkow/RaspPl', '_blank');
+		}
+  	},
+	data () {
+		return {
+			dialog: {
+				visible: false
+			}
+		};
+	}
   };
 </script>
 

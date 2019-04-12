@@ -46,18 +46,18 @@
       item-value="name"
       multiple
       clearable
-			:menu-props="menuProps"
       auto-select-first
     >
       <template v-slot:selection="data">
-        <v-chip
-          :selected="data.selected"
-          close
-          label
-          @input="remove(data.item)"
-        >
-          {{ data.item.name }}
-        </v-chip>
+				<v-chip
+					:selected="data.selected"
+					close
+					label
+					@input="remove(data.item)"
+				>
+					{{ data.item.name }}
+
+				</v-chip>
       </template>
       <template v-slot:item="data">
         <template v-if="typeof data.item !== 'object'">

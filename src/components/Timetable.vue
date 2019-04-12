@@ -1,15 +1,23 @@
 <template>
   <div>
     <v-container>
+			<v-layout row wrap align-center justify-center>
+				<v-flex xs5 sm4 md3>
+					<v-btn outline small icon v-on:click="weekOffset--">
+						<v-icon>keyboard_arrow_left</v-icon>
+					</v-btn>
+					<span>{{`с ${firstDayDate.clone().add(1, 'd').locale('ru').format('DD MMMM')}`}}</span>
+					<v-btn outline small icon v-on:click="weekOffset++">
+						<v-icon>keyboard_arrow_right</v-icon>
+					</v-btn>
+				</v-flex>
+			</v-layout>
       <v-layout row wrap align-center justify-center>
-        <v-flex xs12 sm7 md2>
+        <v-flex xs12 sm8 md2>
           <v-card tile flat>
-            <v-card-title primary-title>
-              <h3>Расписание&nbsp;</h3>
-            </v-card-title>
+						<v-card-title primary-title=""></v-card-title>
             <v-card-text>
               <v-list>
-                <v-divider></v-divider>
                 <v-list-tile>08:50 10:25</v-list-tile>
                 <v-divider></v-divider>
                 <v-list-tile>10:40 12:15</v-list-tile>
@@ -30,7 +38,7 @@
         </v-flex>
         <v-flex xs12 sm6 md1 v-for="(day) in days">
           <v-card tile flat>
-            <v-card-title primary-title>
+            <v-card-title>
               <h3>{{day.name}}</h3>
             </v-card-title>
             <v-card-text>
@@ -40,13 +48,13 @@
                     <span slot="badge">{{lesson.length}}</span>
                     <v-icon
                       color="black"
-                      large>
+											medium>
                       {{'filter_'+(i+1)}}
                     </v-icon>
                   </v-badge>
                   <v-badge v-else color="red" overlap>
                     <v-icon
-                      large
+											medium
                       color="grey">
                       {{'filter_'+(i+1)}}
                     </v-icon>
@@ -65,7 +73,10 @@
 			scrollable
     >
       <v-card>
-        <v-card-title class="headline">{{currentDay.name}}&nbsp;{{currentKey}}</v-card-title>
+        <v-card-title class="headline">
+					{{`${firstDayDate.clone().add(currentDay.num,'d').locale('ru').format('dddd, Do MMMM')}`}}
+					&nbsp;{{`с ${currentKey}`}}
+				</v-card-title>
         <v-card-text>
 					<v-treeview :items="currentLessonsTree"></v-treeview>
         </v-card-text>
@@ -87,17 +98,20 @@
 
 <script>
   import moment from 'moment';
+import 'moment/locale/ru';
 
-  export default {
+export default {
   	name: 'app-timetable',
   	props: ['selectedGroups'],
   	mounted () {
   	},
   	data () {
   		return {
+  			weekOffset: 0,
   			dialog: false,
 			currentDay: null,
   			currentKey: null,
+			snackbar: false,
   			days: [
   				{
   					name: 'Пн',
@@ -187,7 +201,7 @@
   					this.days[i].rasp[key] = [];
   				}
   			}
-  			const m = moment().subtract(moment().day(), 'd');
+  			const m = this.firstDayDate.clone();
   			for (let grNum = 0; grNum < selectedGroups.length; grNum++) {
   				const groupTimetable = selectedGroups[grNum];
   				const groupLessons = [].concat(...groupTimetable.lessons);
@@ -201,7 +215,13 @@
   					// console.log(dayTimetable);
   					for (var j = 0; j < dayTimetable.length; j++) {
   						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
-  						this.days[i].rasp[dayTimetable[j].time.start].push(Object.assign({group: groupTimetable.name}, dayTimetable[j]));
+						let time = '8:50';
+						if (this.days[i].rasp[dayTimetable[j].time.start]) {
+							time = dayTimetable[j].time.start;
+						} else {
+							continue;
+						}
+  						this.days[i].rasp[time].push(Object.assign({group: groupTimetable.name}, dayTimetable[j]));
   					}
   				}
   			}
@@ -219,9 +239,16 @@
   		selectedGroups: function (value) {
   			// console.log(value);
   			this.buildTimetable(value);
+  		},
+		firstDayDate: function () {
+  			this.buildTimetable(this.selectedGroups);
   		}
   	},
 	computed: {
+		firstDayDate: function () {
+			const m = moment().subtract(moment().day(), 'd');
+			return m.add((this.weekOffset * 7), 'd');
+		},
 		currentLessonsTree: function () {
 			if (this.currentDay == null || this.currentKey == null) {
 				return [];

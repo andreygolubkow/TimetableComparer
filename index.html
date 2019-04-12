@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Расписание+</title>
+	<meta name="og:title" content="Расписание+" />
+	<meta name="og:description" content="Поиск окон в расписании ТУСУР." />
+	<meta name="og:type" content="website" />
+	<meta name="yandex-verification" content="f11f35bfc6a8a074" />
+
   <!--[if IE]>
   <link rel="shortcut icon" href="/static/img/icons/favicon.ico"><![endif]-->
   <!-- Add to home screen for Android and modern mobile browsers -->
@@ -13,14 +18,14 @@
 
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="xtimetable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Расписание">
   <link rel="apple-touch-icon"
         href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-192.png">
   <!-- Add to home screen for Windows -->
   <meta name="msapplication-TileImage"
-        content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon-192.png">
-  <meta name="msapplication-TileColor" content="#000000">
+        content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/favicon.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
   <% for (var chunk of webpack.chunks) {
   for (var file of chunk.files) {
   if (file.match(/\.(js|css)$/)) { %>
@@ -34,7 +39,8 @@
 </head>
 <body>
 <noscript>
-  This is your fallback content in case JavaScript fails to load.
+  Ваш браузер не может отобразить эту страницу.
+	Возможно, у вас выключен javascript.
 </noscript>
 <div id="app"></div>
 <!-- Todo: only include in production -->

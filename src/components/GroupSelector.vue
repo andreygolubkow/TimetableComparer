@@ -36,29 +36,17 @@
   </v-combobox> ---->
   <v-flex xs12>
     <v-autocomplete
-      v-model="selected"
+      v-model="input"
       :items="groups"
-      chips
       label="Группы"
       placeholder="Начните вводить номер группы"
       color="blue-grey lighten-2"
       item-text="name"
       item-value="name"
-      multiple
-      clearable
+			dense
+			v-on:input="enterGroup"
       auto-select-first
     >
-      <template v-slot:selection="data">
-				<v-chip
-					:selected="data.selected"
-					close
-					label
-					@input="remove(data.item)"
-				>
-					{{ data.item.name }}
-
-				</v-chip>
-      </template>
       <template v-slot:item="data">
         <template v-if="typeof data.item !== 'object'">
           <v-list-tile-content v-text="data.item"></v-list-tile-content>
@@ -69,7 +57,21 @@
           </v-list-tile-content>
         </template>
       </template>
+			<template v-slot:no-data>
+				<v-list-tile-content>
+				&nbsp;Мы не можем найти такую группу.
+					</v-list-tile-content>
+			</template>
     </v-autocomplete>
+		<div class="text-xs-left">
+			<v-chip  v-for="chip in selected"
+				close
+				label
+				@input="remove(chip)"
+			>
+				{{chip}}
+			</v-chip>
+		</div>
   </v-flex>
 
 </template>
@@ -80,9 +82,8 @@
   	data () {
   		return {
   			groups: [],
+			input: null,
   			selected: [],
-  			search: null,
-  			isUpdating: false,
 			menuProps: {
   				'closeOnClick': false,
 				'closeOnContentClick': false,
@@ -101,6 +102,16 @@
   				this.selected.indexOf(item.name) !== -1
   			);
   		},
+		enterGroup (group) {
+			if (this.selected.filter(s => s === group).length === 0 &&
+					this.groups.filter(g => g.name === group).length === 1) {
+				this.selected.push(group);
+				group = '';
+			}
+		},
+		endEdit (f) {
+			console.log(f);
+		},
   		remove (item) {
   			console.log('remove');
   			this.selected.splice(this.selected.indexOf(item), 1);

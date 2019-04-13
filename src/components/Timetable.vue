@@ -2,7 +2,7 @@
   <div>
     <v-container>
 			<v-layout row wrap align-center justify-center>
-				<v-flex xs5 sm4 md3>
+				<v-flex xs10 sm4 md3>
 					<v-btn outline small icon v-on:click="weekOffset--">
 						<v-icon>keyboard_arrow_left</v-icon>
 					</v-btn>

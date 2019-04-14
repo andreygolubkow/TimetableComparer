@@ -1,7 +1,11 @@
-# xtimetable
+# Расписание+
+##### Поиск окна в раписании.
 
 > The application connects the schedules of training groups into one. Allows you to find free time for everyone.
 
+> Сервис позволяет накладывать несколько раписаний друг на друга. Анализуруя занятость студентов, можно выбрать
+оптимальное время для назначения консультации.
+ 
 ## Build Setup
 
 ``` bash
@@ -18,4 +22,11 @@ npm run build
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Обновление раписания
+
+``` bash
+# Для ТУСУР
+npm run update-tusur
+# Для ТГУ
+npm run update-tsu
+```

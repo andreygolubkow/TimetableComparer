@@ -120,7 +120,7 @@
   	},
   	mounted () {
   		this.$nextTick(() => {
-  			this.$root.getTimetable((timetable) => {
+  			this.$root.getTusurTimetable((timetable) => {
   				const fgList = timetable.faculties.map(f => f.groups);
   				this.groups = [].concat(...fgList);
   			});

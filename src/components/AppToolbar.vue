@@ -8,7 +8,8 @@
 			<template v-slot:activator="{ on }">
 				<h3 class="hidden-xs-only hidden-md-and-up">Университет:</h3>
 				<v-btn medium flat v-on="on" class="hidden-md-and-up">
-					ТУСУР
+					{{ $route.name === 'tsu' ? 'ТГУ' : 'ТУСУР'
+					}}
 					<v-icon>
 						arrow_drop_down
 					</v-icon>
@@ -51,7 +52,7 @@
 
 		<v-menu offset-y class="hidden-md-and-up">
 			<template v-slot:activator="{ on }">
-				<v-btn icon v-on="on">
+				<v-btn icon v-on="on" class="hidden-md-and-up">
 					<v-icon>
 						more_vert
 					</v-icon>

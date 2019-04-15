@@ -1,8 +1,8 @@
 <template>
-  <div>
+		<div>
 		<app-groupselector :selectedGroups='selectedGroupsModel'></app-groupselector>
     <app-timetable :selectedGroups='selectedGroupsModel.selectedGroups'></app-timetable>
-  </div>
+		</div>
 </template>
 
 <script>
@@ -17,6 +17,9 @@
 				selectedGroups: []
 			}
 		};
+	},
+	mounted: function () {
+		localStorage.setItem('univer', 'tusur');
 	}
   };
 </script>

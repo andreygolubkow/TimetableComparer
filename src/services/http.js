@@ -24,7 +24,7 @@ export default {
 	},
 	getTsuTimetable (responseCallback, errorCallback) {
 		if (!timetable) {
-			axios.get('/static/tusur/rasp.json')
+			axios.get('/static/tsu/rasp.json')
 				.then((response) => {
 					// handle success
 					timetable = response.data;

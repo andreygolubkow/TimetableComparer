@@ -10,6 +10,7 @@ import Vuetify from 'vuetify';
 import Vuex from 'vuex';
 import App from './App';
 import Api from './services/http';
+import router from './router';
 
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
@@ -19,6 +20,7 @@ Vue.use(Vuex);
 new Vue({
 	el: '#app',
 	template: '<App/>',
+	router,
 	// eslint-disable-next-line object-curly-spacing
 	components: {App},
 	theme: {

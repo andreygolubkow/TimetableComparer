@@ -4,8 +4,7 @@
 		</app-toolbar>
     <v-content>
       <v-container fluid>
-				<app-groupselector :selectedGroups='selectedGroupsModel'></app-groupselector>
-        <hello :selectedGroups="selectedGroupsModel.selectedGroups"></hello>
+				<router-view/>
       </v-container>
     </v-content>
     <v-footer app style="opacity: .3;">
@@ -23,24 +22,15 @@
 </template>
 
 <script>
-  import Hello from './components/MainView';
   import AppToolbar from './components/AppToolbar';
-import AppGroupselector from './components/GroupSelector';
+import TusurTimetable from './components/tusur/TusurTimetable';
 
   export default {
   	name: 'app',
   	components: {
   		AppToolbar,
-  		Hello,
-		AppGroupselector
-  	},
-	data () {
-		return {
-			selectedGroupsModel: {
-				selectedGroups: []
-			}
-		};
-	}
+		TusurTimetable
+  	}
   };
 </script>
 

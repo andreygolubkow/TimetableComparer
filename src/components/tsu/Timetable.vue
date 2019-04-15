@@ -259,6 +259,8 @@ export default {
 			switch (num) {
 				case '0':
 					return 'Практика';
+				case '1':
+					return 'Лаборатория';
 				case '2':
 					return 'Лекция';
 				case '3':

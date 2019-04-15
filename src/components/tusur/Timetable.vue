@@ -264,7 +264,6 @@ export default {
 						{name: l.teachers.map(t => t.name).join()}
 					]};
 			});
-			console.log(m);
 			return m;
 		}
 	}

@@ -18,17 +18,17 @@
 						<v-card-title primary-title=""></v-card-title>
             <v-card-text>
               <v-list>
-                <v-list-tile>08:50 10:25</v-list-tile>
+                <v-list-tile>08:45 10:20</v-list-tile>
                 <v-divider></v-divider>
-                <v-list-tile>10:40 12:15</v-list-tile>
+                <v-list-tile>10:35 12:10</v-list-tile>
                 <v-divider></v-divider>
-                <v-list-tile>13:15 14:50</v-list-tile>
+                <v-list-tile>12:25 14:00</v-list-tile>
                 <v-divider></v-divider>
-                <v-list-tile>15:00 16:35</v-list-tile>
+                <v-list-tile>14:45 16:20</v-list-tile>
                 <v-divider></v-divider>
-                <v-list-tile>16:45 18:20</v-list-tile>
+                <v-list-tile>16:35 18:10</v-list-tile>
                 <v-divider></v-divider>
-                <v-list-tile>18:30 20:05</v-list-tile>
+                <v-list-tile>18:25 20:00</v-list-tile>
                 <v-divider></v-divider>
                 <v-list-tile>20:15 21:50</v-list-tile>
                 <v-divider></v-divider>
@@ -117,20 +117,20 @@ export default {
   					name: 'Пн',
   					num: 1,
   					rasp: {
-  						'8:45': [],
-  						'10:35': [],
-  						'12:25': [],
-  						'14:45': [],
-  						'16:35': [],
-  						'18:25': [],
-  						'20:15': []
+						'08:45': [],
+						'10:35': [],
+						'12:25': [],
+						'14:45': [],
+						'16:35': [],
+						'18:25': [],
+						'20:15': []
   					}
   				},
   				{
   					name: 'Вт',
   					num: 2,
   					rasp: {
-						'8:45': [],
+						'08:45': [],
 						'10:35': [],
 						'12:25': [],
 						'14:45': [],
@@ -143,7 +143,7 @@ export default {
   					name: 'Ср',
   					num: 3,
   					rasp: {
-						'8:45': [],
+						'08:45': [],
 						'10:35': [],
 						'12:25': [],
 						'14:45': [],
@@ -156,7 +156,7 @@ export default {
   					name: 'Чт',
   					num: 4,
   					rasp: {
-						'8:45': [],
+						'08:45': [],
 						'10:35': [],
 						'12:25': [],
 						'14:45': [],
@@ -169,7 +169,7 @@ export default {
   					name: 'Пт',
   					num: 5,
   					rasp: {
-						'8:45': [],
+						'08:45': [],
 						'10:35': [],
 						'12:25': [],
 						'14:45': [],
@@ -182,7 +182,7 @@ export default {
   					name: 'Сб',
   					num: 6,
   					rasp: {
-						'8:45': [],
+						'08:45': [],
 						'10:35': [],
 						'12:25': [],
 						'14:45': [],
@@ -201,27 +201,48 @@ export default {
   					this.days[i].rasp[key] = [];
   				}
   			}
-  			const m = this.firstDayDate.clone();
+			const m = this.firstDayDate.clone();
   			for (let grNum = 0; grNum < selectedGroups.length; grNum++) {
   				const groupTimetable = selectedGroups[grNum];
-  				const groupLessons = [].concat(...groupTimetable.lessons);
-  				// console.log(groupLessons);
+  				const groupLessons = [].concat(...groupTimetable.days);
 
   				for (var i = 0; i < this.days.length; i++) {
   					// console.log('date');
-  					const dateString = moment(m).add(this.days[i].num, 'd').format('DD.MM.YYYY');
+  					const currentDate = moment(m).add(this.days[i].num, 'd');
   					// console.log(dateString);
-  					const dayTimetable = groupLessons.filter(l => l.date.indexOf(dateString) > -1);
+  					// const dayTimetable = groupLessons.filter(l => l.date.indexOf(dateString) > -1);
+					const day = this.days[i];
+  					const dayTimetable = groupLessons.filter(t => t.weekday === day.num);
   					// console.log(dayTimetable);
-  					for (var j = 0; j < dayTimetable.length; j++) {
+					if (dayTimetable.length === 0) {
+						continue;
+					}
+					const lessons = dayTimetable[0].lessons;
+  					for (var j = 0; j < lessons.length; j++) {
   						// console.log(this.days[i].rasp[dayTimetable[j].time.start]);
-						let time = '8:50';
-						if (this.days[i].rasp[dayTimetable[j].time.start]) {
-							time = dayTimetable[j].time.start;
+						let time = '8:45';
+						if (this.days[i].rasp[lessons[j].time_start]) {
+							time = lessons[j].time_start;
 						} else {
+							console.log(`Не нашли время ${lessons[j].time_start}`);
 							continue;
 						}
-  						this.days[i].rasp[time].push(Object.assign({group: groupTimetable.name}, dayTimetable[j]));
+
+						const dateStart = moment(lessons[j].date_start, 'DD.MM.YYYY');
+						const dateEnd = moment(lessons[j].date_end, 'DD.MM.YYYY');
+
+						if (lessons[j].subject === 'БЖД') {
+							console.log(dateStart);
+							console.log(dateEnd);
+							console.log(currentDate);
+
+							console.log(currentDate.isBetween(dateStart, dateEnd));
+						}
+
+						const dateEntrance = currentDate.isBetween(dateStart, dateEnd);
+						if (dateEntrance) {
+							this.days[i].rasp[time].push(Object.assign({group: groupTimetable.group_name}, lessons[j]));
+						}
   					}
   				}
   			}
@@ -233,7 +254,19 @@ export default {
   			this.currentDay = day;
   			this.currentKey = key;
   			this.dialog = true;
-  		}
+  		},
+		getTypeByNum (num) {
+			switch (num) {
+				case '0':
+					return 'Практика';
+				case '2':
+					return 'Лекция';
+				case '3':
+					return 'Семинар';
+				default:
+					return '???';
+			}
+		}
   	},
   	watch: {
   		selectedGroups: function (value) {
@@ -259,12 +292,11 @@ export default {
 					name: l.group,
 					children: [
 						{name: l.subject},
-						{name: l.type},
-						{name: l.audiences.map(a => a.name).join()},
-						{name: l.teachers.map(t => t.name).join()}
+						{name: this.getTypeByNum(l.type)},
+						{name: l.auditories.map(a => a.auditory_name).join()},
+						{name: l.teachers.map(t => t.teacher_name).join()}
 					]};
 			});
-			console.log(m);
 			return m;
 		}
 	}

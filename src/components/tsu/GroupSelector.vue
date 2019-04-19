@@ -89,7 +89,7 @@
 		loadGroups () {
 			this.$root.getTsuGroupsByFac(this.faculty.faculty_id, (groups) => {
 				if (groups.groups) {
-					this.groups = groups.groups;
+					this.groups = groups.groups.filter(g => g.group_type === 'ГРУППА');
 					this.groups.sort((a, b) => {
 						return a.group_name > b.group_name ? 1 : -1;
 					});

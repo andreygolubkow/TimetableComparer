@@ -48,7 +48,7 @@
                     <span slot="badge">{{lesson.length}}</span>
                     <v-icon
                       color="black"
-											medium>
+					>
                       {{'filter_'+(i+1)}}
                     </v-icon>
                   </v-badge>
@@ -56,7 +56,7 @@
                     <v-icon
 											medium
                       color="grey">
-                      {{'filter_'+(i+1)}}
+						{{'filter_'+(i+1)}}
                     </v-icon>
                   </v-badge>
                 </v-list-tile>
@@ -78,7 +78,17 @@
 					&nbsp;{{`с ${currentKey}`}}
 				</v-card-title>
         <v-card-text>
-					<v-treeview :items="currentLessonsTree"></v-treeview>
+			<div v-for="lesson in currentLessons">
+			<p>
+				<v-icon size="20">group</v-icon>{{lesson.group}}
+				<v-icon size="20">room</v-icon>{{lesson.audiences.map(a=>a.name).join(',')}}
+				<v-icon size="20">announcement</v-icon> {{lesson.type}}
+				<br>
+				<span><v-icon size="20">library_books</v-icon>{{lesson.subject}}</span>
+				<br>
+				<span><v-icon size="20">record_voice_over</v-icon>{{lesson.teachers.map(t => t.name).join(',')}}</span>
+			</p>
+			</div>
         </v-card-text>
 
         <v-card-actions>
@@ -265,6 +275,13 @@ export default {
 					]};
 			});
 			return m;
+		},
+		currentLessons: function () {
+			if (this.currentDay == null || this.currentKey == null) {
+				return [];
+			}
+			const lessons = this.currentDay.rasp[this.currentKey];
+			return lessons;
 		}
 	}
   };

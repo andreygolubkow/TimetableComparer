@@ -97,18 +97,15 @@
 
     			this.selectedSpeakers.selectedSpeakers = groups;
     		},
-    		enterGroup (group) {
-    			if (this.selected.filter(s => s === group).length === 0 &&
-                    this.groups.filter(g => g.name === group).length === 1) {
-    				this.selected.push(group);
-    				group = '';
-    			}
-    		},
     		enterTeachers (teacher) {
-    			this.selected.push(teacher);
-    		},
-    		endEdit (f) {
-    			console.log(f);
+    			if (this.selected.filter(s => s === teacher).length === 0 &&
+                    this.teachers.filter(g => g === teacher).length === 1) {
+    				this.selected.push(teacher);
+    			}
+
+    			this.$nextTick(() => {
+    				this.input = null;
+    			});
     		},
     		remove (item) {
     			console.log('remove');

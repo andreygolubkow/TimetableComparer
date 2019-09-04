@@ -1,39 +1,4 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
-<!---<v-combobox
-    v-model="selectedGroups.selectedGroups"
-    :items="groups"
-    @change="groupListEdited()"
-    label="Группы"
-    placeholder="Начните вводить номер группы"
-    item-text="name"
-    chips
-    clearable
-    solo
-    multiple
-    auto-select-first
-    :search-input.sync="search"
-    autofocus
-  >
-    <template v-slot:no-data>
-      <v-list-tile>
-        <v-list-tile-content>
-          <v-list-tile-title>
-            В списке пока нет такой группы.
-          </v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </template>
-    <template v-slot:selection="{ item, parent, selected }">
-      <v-chip
-        close
-        @input="remove(item)"
-        label
-        small
-      >
-        <strong>{{ item.name }}</strong>&nbsp;
-      </v-chip>
-    </template>
-  </v-combobox> ---->
   <v-flex xs12>
     <v-autocomplete
       v-model="input"

@@ -68,7 +68,9 @@
 
     			for (var i = 0; i < arr.length; i++) {
     				const less = arr[i];
-    				if (!newArr.find(a => (a.subject.localeCompare(less.subject) === 0 && a.date.localeCompare(less.date) === 0))) {
+    				if (!newArr.find(a => (a.subject.localeCompare(less.subject) === 0 &&
+									a.date.localeCompare(less.date) === 0 &&
+									a.type.localeCompare(less.type) === 0))) {
     					newArr.push(less);
     				}
     			}

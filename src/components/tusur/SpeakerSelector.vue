@@ -106,6 +106,11 @@
     				this.$metrika.reachGoal('selectTeacher', {params: {
 					teacher: teacher
 				}});
+    				this.$metrika.params({
+					params: {
+						teachers: this.selected
+					}
+				});
     			}
 
     			this.$nextTick(() => {

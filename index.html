@@ -6,13 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Расписание+ - Расписание ТУСУР, ТГУ</title>
-	<meta name="description" content="Поиск окон в расписании групп ТУСУР и ТГУ" />
+	<meta name="description" content="Электронное расписание ТУСУР и ТГУ. Поиск окон в расписании групп ТУСУР и ТГУ." />
 	<meta name="robots" content="all" />
 	<link rel="canonical" href="https://rasp.tk" />
-	<meta name="keywords" content="Расписание, занятия, группы, ТУСУР, ТГУ, университет, окно" />
+	<meta name="keywords" content="Расписание, занятия, группы, ТУСУР, ТГУ, университет, окно, ФБ, ФВС, РКФ, ФИТ, РТФ, ФЭТ, ГФ, ЮФ." />
 	<meta name="author" content="Андрей Голубков" />
 	<meta name="og:title" content="Расписание+" />
-	<meta name="og:description" content="Поиск окон в расписании ТУСУР и ТГУ." />
+	<meta name="og:description" content="Электронное расписание ТУСУР и ТГУ. Поиск окон в расписании групп ТУСУР и ТГУ." />
 	<meta name="og:type" content="website" />
 	<meta name="yandex-verification" content="f11f35bfc6a8a074" />
 
@@ -50,22 +50,17 @@
 </noscript>
 <div id="app"></div>
 
-<!-- Firebase start -->
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 <script>
-	// Initialize Firebase
-	var config = {
-		apiKey: 'AIzaSyBIaJgFbja8f8Dh4hM7F1EquA6BwEjWApY',
-		authDomain: 'rasppl.firebaseapp.com',
-		databaseURL: 'https://rasppl.firebaseio.com',
-		projectId: 'rasppl',
-		storageBucket: 'rasppl.appspot.com',
-		messagingSenderId: '294642105463'
-	};
-	firebase.initializeApp(config);
+    // eslint-disable-next-line camelcase
+    const tazeros_stats_config = {
+    	site_id: 1565294678,
+    	permission: 'yes',
+    	movements: true
+    };
 </script>
-<!-- Firebase End -->
-<!-- Yandex.Metrika counter -->
+<script async src="https://stats.tazeros.com/v3.js"></script>
+
+<!--
 <script type="text/javascript" >
 	(function (m, e, t, r, i, k, a) {
 	m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments); };
@@ -82,7 +77,7 @@
 	});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/53251846" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+Yandex.Metrika counter -->
 <!-- Todo: only include in production -->
 <%= htmlWebpackPlugin.options.serviceWorkerLoader %>
 <!-- built files will be auto injected -->

@@ -76,6 +76,11 @@
     				this.$metrika.reachGoal('selectGroup', {params: {
 					group: group
 				}});
+    				this.$metrika.params({
+    					params: {
+    						groups: this.selected
+    					}
+    				});
     				group = '';
     			}
     			this.$nextTick(() => {

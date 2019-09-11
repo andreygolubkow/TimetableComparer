@@ -243,6 +243,7 @@ export default {
   			this.currentDay = day;
   			this.currentKey = key;
   			this.dialog = true;
+  			this.$metrika.reachGoal('viewLesson');
   		}
   	},
   	watch: {

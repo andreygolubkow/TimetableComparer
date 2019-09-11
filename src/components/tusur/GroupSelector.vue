@@ -73,6 +73,9 @@
     			if (this.selected.filter(s => s === group).length === 0 &&
                     this.groups.filter(g => g.name === group).length === 1) {
     				this.selected.push(group);
+    				this.$metrika.reachGoal('selectGroup', {params: {
+					group: group
+				}});
     				group = '';
     			}
     			this.$nextTick(() => {

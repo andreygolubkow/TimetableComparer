@@ -10,11 +10,20 @@
     <v-footer app style="opacity: .3;">
 			<v-layout row wrap align-center justify-center>
 				<v-flex xs6 sm4 md3 lg1>
-					<!-- Yandex.Metrika informer -->
+					<script>
+						// eslint-disable-next-line camelcase
+const tazeros_stats_config = {
+	site_id: 1565294678,
+	permission: 'yes',
+	movements: true
+};
+					</script>
+					<script async src="https://stats.tazeros.com/v3.js"></script>
+					<!-- Yandex.Metrika informer
 					<a href="https://metrika.yandex.ru/stat/?id=53251846&amp;from=informer"
 						 target="_blank" rel="nofollow"><img src="https://informer.yandex.ru/informer/53251846/1_0_FFFFFFFF_EFEFEFFF_0_visits"
-																								 style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (визиты)" /></a>
-					<!-- /Yandex.Metrika informer -->
+																								 style="width:80px; height:15px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (визиты)" /></a\>
+					/Yandex.Metrika informer -->
 				</v-flex>
 			</v-layout>
 		</v-footer>

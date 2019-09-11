@@ -103,6 +103,9 @@
     			if (this.selected.filter(s => s === teacher).length === 0 &&
                     this.teachers.filter(g => g === teacher).length === 1) {
     				this.selected.push(teacher);
+    				this.$metrika.reachGoal('selectTeacher', {params: {
+					teacher: teacher
+				}});
     			}
 
     			this.$nextTick(() => {

@@ -4,7 +4,7 @@
 import 'vuetify/dist/vuetify.min.css';
 // Helpers
 import colors from 'vuetify/es5/util/colors';
-
+import VueYandexMetrika from 'vue-yandex-metrika'
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';
@@ -15,6 +15,11 @@ import router from './router';
 Vue.config.productionTip = false;
 Vue.use(Vuetify);
 Vue.use(Vuex);
+Vue.use(VueYandexMetrika, {
+	id: 53251846,
+	router: router,
+	env: process.env.NODE_ENV
+});
 
 // eslint-disable-next-line no-new
 new Vue({

@@ -4,7 +4,7 @@
 import 'vuetify/dist/vuetify.min.css';
 // Helpers
 import colors from 'vuetify/es5/util/colors';
-import VueYandexMetrika from 'vue-yandex-metrika'
+import VueYandexMetrika from 'vue-yandex-metrika';
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';
